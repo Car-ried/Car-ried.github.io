@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ben Boyer Portfolio</title>
+        <link rel="stylesheet" href="v2.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="doodle.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zeyada&display=swap"
+            rel="stylesheet" />
+
+        <meta charset="UTF-8" />
+        <meta meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+            body {
+                font-family: "Short Stack", cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header">
+            <nav class="nav">
+                <div class="nav-left">
+                    <ul>
+                        <li>
+                            <a href="v2.html">
+                                <div class="highlightAnim">Benjamin Boyer</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li>
+                            <button class="contact">Contact Me</button>
+                            <div class="dropdownWrapper">
+                                <div class="dropdownGap"></div>
+                                <div class="dropdown">
+                                    <div class="left">
+                                        <a> Phone: </a>
+                                        <a> E-mail: </a>
+                                        <a> LinkedIn: </a>
+                                    </div>
+                                    <div class="right">
+                                        <a> <button onclick="getNumber()">0448 943 236</button> <br /> </a>
+                                        <a> <button onclick="getEmail()">benboyer369@gmail.com</button> <br /> </a>
+                                        <a href="https://www.linkedin.com/in/benjamin-boyer-47962026a/">
+                                            Benjamin Boyer
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#experience">
+                                <div class="highlightAnim">Experience</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects">
+                                <div class="highlightAnim">Projects</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="main">
+            <div class="heromsg">
+                <div class="spacer"></div>
+                <h1>Hey! I'm <span>Ben Boyer</span></h1>
+                <p>Mechanical Engineer. &nbsp; Student. &nbsp; Designer.</p>
+                <a href="#experience">
+                    <button href="#experience" class="getInTouch">Discover more.</button>
+                </a>
+            </div>
+            <img src="ben-boyer-1583.jpg" width="635" height="667" alt="Portrait Photo" />
+        </div>
+
+        <div class="anchor" id="projects"></div>
+        <!--<hr class="solid" />-->
+
+        <div id="projSec" class="section">
+            <div class="scribblesCont">
+                <div id="scribble1" class="scribble">
+                    <p id="comment1">Fully 3D-Printable</p>
+                    <img src="pppointed.svg" style="width: 20rem" />
+                </div>
+                <div id="scribble2" class="scribble">
+                    <p id="comment2">LEGO Axle</p>
+                    <img src="pppointed%20(1).svg" style="width: 20rem" />
+                </div>
+            </div>
+            <div class="scribblesCont">
+                <div id="scribble3" class="scribble">
+                    <p id="comment3">Swappable surface material</p>
+                    <img src="pppointed%20(4).svg" style="width: 20rem" />
+                </div>
+                <div id="scribble4" class="scribble">
+                    <p id="comment4">Adjustable angle</p>
+                    <img src="pppointed%20(5).svg" style="width: 20rem" />
+                </div>
+            </div>
+            <div class="scribblesCont">
+                <div id="scribble5" class="scribble">
+                    <p id="comment5">Completely custom</p>
+                    <img src="pppointed%20(6).svg" style="width: 20rem" />
+                </div>
+            </div>
+            <div class="projTitleCont">
+                <div class="projH">My Projects</div>
+                <div class="projP">
+                    I've taken on a series of personal projects. <br />
+                    Here are some I think you might like.
+                </div>
+            </div>
+            <div class="projGridCont">
+                <div onclick="location.href='OMNI.html';" id="proj1" class="projBox">
+                    <div class="projName">OMNI Wheel</div>
+                    <div class="projNum">#1</div>
+                    <img id="sketchimg1" src="path1_enlarged.png" width="635" height="667" alt="Portrait Photo" />
+                    <img id="colorimg1" src="coloured_enlarged.png" width="635" height="667" alt="Portrait Photo" />
+                </div>
+                <div onclick="location.href='OMNI.html';" id="proj2" class="projBox">
+                    <div class="projName">Workbench</div>
+                    <div class="projNum">#2</div>
+                    <img id="sketchimg2" src="g2820.png" width="635" height="667" alt="Portrait Photo" />
+                    <img id="colorimg2" src="image1-7.png" width="635" height="667" alt="Portrait Photo" />
+                </div>
+                <div onclick="location.href='OMNI.html';" id="proj3" class="projBox">
+                    <div class="projName">Butterfly Board</div>
+                    <div class="projNum">#3</div>
+                    <img src="butterflyboard-websketch-noannot.jpg" width="635" height="667" alt="Portrait Photo" />
+                </div>
+            </div>
+        </div>
+
+        <div class="anchor" id="experience"></div>
+        <!--<hr class="solid" />-->
+
+        <div class="section">
+            <br /><br />
+            <div class="leftCont">
+                <img src="pexels-narcisa-aciko-541222-1292464.jpg" width="635" height="667" alt="Portrait Photo" />
+            </div>
+            <div class="rightCont">
+                <div class="text">
+                    <h1>Experience</h1>
+                    <p>
+                        Hey, I'm <span>Ben</span>! Currently, I'm completing my
+                        <span>Mechanical Engineering </span> degree at the University of Newcastle. I cannot wait to
+                        graduate, as I am already keen to develop the solutions that will make a real imact on the
+                        future. I currently fill my time outside of work and uni with hobbies, and to persue personal
+                        projects, all of which I'm really proud of and have showcased on my website. <br /><br />
+                        I have hands-on experience with <span>Fusion360</span>, <span>Creo Parametric</span>, and
+                        <span>Shapr3D</span>. Additionally, I have extensively utilized <span>3D Printing</span>
+                        as a manufacturing technique. If you're interested in my work or have any opportunities in mind,
+                        feel free to reach out!
+                    </p>
+                    <div class="jobTitleCont">
+                        <div class="jobHeading">
+                            <a href="https://energyrenaissance.com/">
+                                <div class="highlightAnim">Energy Renaissance - CAD Designer</div>
+                            </a>
+                        </div>
+                        <div class="jobPeriod">Feb 2023 to Present</div>
+                    </div>
+                    <div class="jobDescription">
+                        <ul>
+                            <li>Lead the design and oversee manufacturing of the innovative products offered.</li>
+                            <li>
+                                Utilize Computer Aided Design (CAD) to create detailed assembly drawings and models.
+                            </li>
+                            <li>Responsible for the Research and Development of new products.</li>
+                            <li>Ability to work in a dynamic, team-oriented environment to achieve project goals.</li>
+                        </ul>
+                    </div>
+                    <div class="jobTitleCont">
+                        <div class="jobHeading">
+                            <a href="https://www.newcastle.edu.au/">
+                                <div class="highlightAnim">UON - Bachelor of Mechanical Engineering</div>
+                            </a>
+                        </div>
+                        <div class="jobPeriod">Completing 2025</div>
+                    </div>
+                    <div class="jobDescription">
+                        <div class="marks">
+                            <div class="initCol">
+                                <ul>
+                                    <li>MECH1110</li>
+                                    <li>ENGG3500</li>
+                                    <li>ENGG1500</li>
+                                    <li>MECH1750</li>
+                                    <li>ELEC1310</li>
+                                    <li>ENGG2440</li>
+                                    <li>MECH2430</li>
+                                </ul>
+                            </div>
+                            <div class="subCol">
+                                <ul>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                </ul>
+                            </div>
+                            <div class="subCol">
+                                <ul>
+                                    <li>Introduction to Mechanical Engineering</li>
+                                    <li>Managing Engineering Projects</li>
+                                    <li>Introduction to Professional Engineering</li>
+                                    <li>Engineering Materials 1</li>
+                                    <li>Introduction to Electrical Engineering</li>
+                                    <li>Modelling and Control</li>
+                                    <li>Mechanics of Solids 1</li>
+                                </ul>
+                            </div>
+                            <div class="subCol">
+                                <ul>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                </ul>
+                            </div>
+                            <div class="subCol">
+                                <ul>
+                                    <li>95% (High Distinction)</li>
+                                    <li>93% (High Distinction)</li>
+                                    <li>84% (Distinction)</li>
+                                    <li>78% (Distinction)</li>
+                                    <li>75% (Distinction)</li>
+                                    <li>75% (Distinction)</li>
+                                    <li>75% (Distinction)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" id="footer">
+            <div class="gridSection">
+                <h1>Benjamin Boyer</h1>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/benjamin-boyer-47962026a/">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="number">0448 943 236</div>
+                <div class="email">benboyer369@gmail.com</div>
+                <div class="copyright">This whole page was a project itself! Feel free to let me know of any bugs!</div>
+            </div>
+        </div>
+
+        <button onclick="topFunction()" id="returnButton" title="Go to top">
+            <img src="chevron-up-svgrepo-com.svg" />
+        </button>
+
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("returnButton");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+        <script>
+            function getNumber() {
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText("0448 943 236");
+
+                // Alert the copied text
+                alert("Copied to clipboard");
+            }
+        </script>
+
+        <script></script>
+    </body>
+</html>
