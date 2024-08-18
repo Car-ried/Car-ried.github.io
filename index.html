@@ -346,6 +346,13 @@
         </button>
         
         <div id="notification" class="notification"></div>
+        
+        <div id="mobilePopup" class="mobile-popup">
+            <div class="popup-content">
+                <p>Hey, I'm Ben! I'm a hobbyist web dev so this website is currently optimized <br />for desktop viewing and may not format correctly on mobile devices.</p>
+                <button id="closePopup">Got it!</button>
+            </div>
+        </div>
 
         <script type="application/ld+json">
             {
@@ -387,9 +394,6 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
-        </script>
-
-        <script>
             
             function showNotification(message) {
                 const notification = document.getElementById("notification");
@@ -420,7 +424,24 @@
                 });
             }
             
+            // Function to check if the user is on a mobile device
+            function isMobileDevice() {
+                return window.innerWidth <= 768;
+            }
+
+            // Show the popup if the user is on a mobile device
+            window.onload = function () {
+                if (isMobileDevice()) {
+                    document.getElementById('mobilePopup').style.display = 'flex';
+                }
+            };
+
+            // Close the popup when the user clicks the "Got it!" button
+            document.getElementById('closePopup').onclick = function () {
+                document.getElementById('mobilePopup').style.display = 'none';
+            };
+            
         </script>
         
-    </body>
+    </body> 
 </html>
