@@ -9,6 +9,7 @@ body {
     min-width: 1730px;
     max-width: 2120px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .barlow-thin {
@@ -171,7 +172,6 @@ nav a {
     margin-right: 80px;
     cursor: pointer;
 
-    position: aboslute;
     transform: translateY(-25%);
     top: 25%;
 }
@@ -248,6 +248,8 @@ nav a {
     text-align: right;
     color: #828282;
     padding: 0;
+    
+    cursor: pointer;
 }
 
 /* Main Landing Page ------------------------------------------*/
@@ -320,7 +322,6 @@ nav a {
 .leftCont img {
     /* Hero Image */
     width: 508px;
-    height: 657;
     object-fit: cover;
     object-position: 55% 0;
     border-radius: 8px;
@@ -346,7 +347,8 @@ hr.solid {
 .sectionWrapper {
     background-color: #ffffff;
     height: 750px;
-    padding: 50px;
+    padding: 50px 0;
+    width: 100%;
 }
 
 .section .text {
@@ -369,7 +371,7 @@ hr.solid {
 
 .text h1 {
     color: black;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
     width: fit-content;
 
@@ -383,13 +385,18 @@ hr.solid {
     line-height: 1.5;
 
     margin-top: 24px;
-    margin-bottom: 12px;
-    padding-bottom: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .text p span {
     color: #2d4061;
     font-weight: bold;
+}
+
+.listGrid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
 }
 
 .jobTitleCont {
@@ -463,39 +470,54 @@ hr.solid {
     box-shadow: inset 0 0 30rem 15rem white;
 }
 
+.posCont {
+    position: relative;
+    height: 0;
+    width: 90%;
+    margin: auto;
+}
+
 .scribblesCont {
     position: absolute;
+    width: 90%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .scribble {
     position: relative;
+    height: fit-content;
     z-index: 99;
     pointer-events: none;
 }
 
 #scribble1 {
-    left: 2rem;
-    top: 5rem;
+    left: -38%;
+    top: 5%;
 }
 
 #scribble2 {
-    left: 16rem;
-    top: 11rem;
+    left: -43%;
+    top: 68%;
 }
 
 #scribble3 {
-    left: 70rem;
-    top: 4rem;
+    left: 37%;
+    top: 10%;
 }
 
 #scribble4 {
-    left: 94rem;
-    top: -12rem;
+    left: 40%;
+    top: 23%;
 }
 
 #scribble5 {
-    left: 64rem;
-    top: 33rem;
+    left: 17%;
+    top: 70%;
 }
 
 .scribble  p {
@@ -508,7 +530,7 @@ hr.solid {
 }
 
 #comment1 {
-    top: 2%;
+    top: 3%;
     left: 61%;
 }
 
@@ -518,13 +540,13 @@ hr.solid {
 }
 
 #comment3 {
-    top: -10%;
+    top: -6%;
     left: 30%;
     width: 70%
 }
 
 #comment4 {
-    top: -12%;
+    top: -9%;
     left: 20%;
 }
 
@@ -593,8 +615,16 @@ hr.solid {
     opacity: 0;
 }
 
+#proj3 #colorimg3 {
+    position: absolute;
+    top: 0%;
+    object-fit: cover;
+    opacity: 0;
+}
+
 #proj1 #sketchimg1,
-#proj2 #sketchimg2 {
+#proj2 #sketchimg2,
+#proj3 #sketchimg3 {
     opacity: 1;
 }
 
@@ -610,12 +640,23 @@ hr.solid {
     transition-delay: 0.2s;
 }
 
+#proj3:hover #sketchimg3{
+    opacity: 0 !important;
+    transition: opacity 0.6s;
+    transition-delay: 0.2s;
+}
+
 #proj1:hover #colorimg1 {
     opacity: 1 !important;
     transition: opacity 0.6s;
 }
 
 #proj2:hover #colorimg2 {
+    opacity: 1 !important;
+    transition: opacity 0.6s;
+}
+
+#proj3:hover #colorimg3 {
     opacity: 1 !important;
     transition: opacity 0.6s;
 }
@@ -674,6 +715,7 @@ hr.solid {
 
 .footer .gridSection {
     margin: 0;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns:
         85px
@@ -753,11 +795,29 @@ hr.solid {
     use columns for proper spacing, svg for high quality colour changing icons */
 
 .anchor {
-    background-color: green;
     display: block;
     position: relative;
     top: -2rem;
     visibility: hidden;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d4061;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.notification.show {
+    display: block;
 }
 
 #returnButton {
@@ -799,29 +859,5 @@ hr.solid {
     to {
         background-size: 100% 40%;
         background-position: 0% 100%;
-    }
-}
-
-@keyframes slideFeat {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
-@keyframes slideTitle {
-    0% {
-        top: 0%;
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(-50%);
-        top: 40%;
     }
 }
