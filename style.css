@@ -252,6 +252,8 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  
+  filter: invert(9%) sepia(14%) saturate(526%) hue-rotate(169deg) brightness(94%) contrast(85%);
 }
 
 /* Buttons */
