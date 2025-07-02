@@ -1,0 +1,17 @@
+/* Testing Ground */
+
+.object-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  margin: auto;
+}
+
+.rounded-container {
+  display: flex;
+  margin: auto;
+  width: 50vw;
+  height: 70vh;
+  background-color: var(--foreground);
+  border-radius: 2rem;
+}
