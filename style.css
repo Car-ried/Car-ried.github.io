@@ -12,7 +12,7 @@
   --primary-light: oklch(0.4276 0.0774 256.5);
   --primary-dark: oklch(0.2413 0.037 257.14);
 
-  --background: oklch(0.9547 0.0017 247.84);
+  --background: oklch(0.975 0.0017 247.84);
   --foreground: oklch(0.9881 0 0);
   --border: oklch(0.903 0.0046 258.33);
 
@@ -335,8 +335,6 @@ section {
   
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  
-  filter: sepia(50%);
 }
 
 .arrow {
@@ -352,6 +350,14 @@ section {
   border-radius: 2rem;
   border: var(--border) 0.1rem solid;
   text-align: center;
+}
+
+.details-container h3 {
+  color: var(--copy);
+}
+
+.text-container p {
+  line-height: 1.5rem;
 }
 
 .section-container {
