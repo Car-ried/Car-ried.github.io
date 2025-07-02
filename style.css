@@ -63,8 +63,6 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
-  background: var(--foreground);
-  border-bottom: var(--border) 0.1rem solid;
 }
 
 .nav-links {
