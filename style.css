@@ -125,6 +125,7 @@ a:hover {
   display: none;
   background-color: var(--foreground);
   border-bottom: var(--border) 0.1rem solid;
+  box-shadow: 0rem 0rem 1rem var(--border);
 }
 
 .hamburger-menu {
