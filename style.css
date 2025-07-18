@@ -125,9 +125,6 @@ a:hover {
   display: none;
   background-color: var(--foreground);
   border-bottom: var(--border) 0.1rem solid;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .hamburger-menu {
@@ -237,13 +234,11 @@ section {
   display: flex;
   height: 400px;
   width: 400px;
-  margin: auto 0;
-}
-
-.profile-pic{
-  width: 100%;
   border-radius: 50%;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
 }
 
 .profile-pic img{
@@ -372,11 +367,20 @@ section {
   display: flex;
 }
 
-.about-pic {
+.about-pic-container {
   border-radius: 2rem;
-  width: 400px;
-  overflow: hidden;
+  display: flex;
+  width: 2000px;
+  justify-content: center;
+}
+
+.about-pic {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  object-position: center 25%;
+  overflow: hidden;
+  margin: auto 0;
   transform: rotateY(180deg);
 }
 
@@ -406,12 +410,6 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.section-pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 /* Experience Section */
