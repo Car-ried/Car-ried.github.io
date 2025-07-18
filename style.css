@@ -123,6 +123,11 @@ a:hover {
 /* Hamburger Menu */
 #hamburger-nav {
   display: none;
+  background-color: var(--foreground);
+  border-bottom: var(--border) 0.1rem solid;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hamburger-menu {
@@ -236,6 +241,7 @@ section {
 }
 
 .profile-pic{
+  width: 100%;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -368,7 +374,7 @@ section {
 
 .about-pic {
   border-radius: 2rem;
-  width: 500px;
+  width: 400px;
   overflow: hidden;
   object-fit: cover;
   transform: rotateY(180deg);
