@@ -16,3 +16,17 @@
   border-radius: 2rem;
   border: var(--border) 0.1rem solid;
 }
+
+.profile-background-container {
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+spline-viewer {
+  width: 100vw;
+  display: flex;
+  margin: auto;
+}
