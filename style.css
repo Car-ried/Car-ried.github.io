@@ -462,26 +462,48 @@ article h3 {
   position: relative;
 }
 
-.color-container {
-  border-color: var(--border);
-  background: var(--foreground);
-  width: 10%;
+.project-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  margin-top: 2rem;
+  grid-row-gap: 2rem;
+}
+
+.project-grid-container > div {
+  height: 35vh;
+  overflow: hidden;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  border-radius: 0.5rem;
+  width: 50vw;
+}
+
+.project-description-container {
+  width: 20vw;
+  position: relative;
 }
 
 .project-title {
   margin: 1rem;
+  margin-right: 0;
+  text-align: right;
   color: var(--copy);
 }
 
+.project-description {
+  text-align: justify;
+}
+
 .project-btn {
-  color: var(--copy);
+  position: absolute;
   border-color: var(--border);
+  right: 0%;
+  bottom: 0%;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 0;
 }
 
 /* Contact Section */
