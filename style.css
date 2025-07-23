@@ -371,7 +371,8 @@ section {
 .about-pic-container {
   border-radius: 2rem;
   display: flex;
-  width: 2000px;
+  width: 200vw;
+  height: 60vh;
   justify-content: center;
 }
 
@@ -379,7 +380,7 @@ section {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 40%;
   overflow: hidden;
   margin: auto 0;
   transform: rotateY(180deg);
@@ -413,7 +414,178 @@ section {
   height: 80%;
 }
 
+.timeline-container {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;  
+}
+
+.fade {
+  mask-image: linear-gradient(to right, transparent, black 2%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 92%, transparent);
+  width: 100%;
+  height: 100%;
+}
+
+.timeline {
+  position: absolute;
+  top: 50%;
+  background-color: var(--border);
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  background-color: var(--border);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  transform: translateY(-50%);
+}
+
+.timeline-dot-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.timeline-dot-wrapper .timeline-dot:nth-child(1) {
+  left: 8%;
+}
+.timeline-dot-wrapper .timeline-dot:nth-child(2) {
+  left: 10%;
+}
+.timeline-dot-wrapper .timeline-dot:nth-child(3) {
+  left: 55%;
+}
+.timeline-dot-wrapper .timeline-dot:nth-child(4) {
+  left: 85%;
+}
+.timeline-dot-wrapper .timeline-dot:nth-child(5) {
+  left: 98%;
+}
+
+.timeline-box {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  background: none;
+  border: var(--border) 2px solid;
+  border-radius: 0.2rem;
+  height: 2rem;
+  width: 100px;
+}
+
+.timeline-box-wrapper .timeline-box:nth-child(1) {
+  width: 8%;
+  left: 0%;
+  border-top: none;
+  border-left: none;
+  transform: 
+    translateX(0.2rem)
+    translateY(35%);
+}
+
+.timeline-box-wrapper .timeline-box:nth-child(2) {
+  width: 88%;
+  left: 10%;
+  border-top: none;
+  transform: 
+    translateX(0.2rem)
+    translateY(35%);
+}
+
+.timeline-box-wrapper .timeline-box:nth-child(3) {
+  width: 30%;
+  left: 55%;
+  border-bottom: none;
+  transform: 
+    translateX(0.1rem)
+    translateY(-135%);
+}
+
+.timeline-title {
+  margin: 0;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+  color: var(--copy-lighter);
+}
+
+
+./*arrow-left, .arrow-right{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 50%;
+  transform: translateY(-60%);
+}
+
+.arrow-right {
+  right: 0%;
+}
+
+.arrow-left span, .arrow-right span {
+  position: absolute;
+  background-color: var(--border);
+}
+
+.arrow-right span:first-child, .arrow-left span:first-child {
+  top: 0%;
+  height: 2px;
+  width: inherit;
+  transform: translateY(-50%);
+}
+
+.arrow-right span:last-child, .arrow-left span:last-child {
+  height: 2px;
+  width: inherit;
+  bottom: 0%;
+  transform: translateY(-50%);
+}
+
+.arrow-left span:first-child {
+  transform: 
+    translateY(100%)
+    translateX(-22%)
+    rotate(-45deg);
+}
+
+.arrow-left span:last-child {
+  transform: 
+    translateX(-22%)
+    rotate(45deg);
+}
+
+.arrow-right span:first-child {
+  transform: 
+    translateY(100%)
+    translateX(22%)
+    rotate(45deg);
+}
+
+.arrow-right span:last-child {
+  transform: 
+    translateX(22%)
+    rotate(-45deg);
+}
+
+*/
+
 /* Experience Section */
+
+#experience .arrow {
+  transform: translateZ(0); /* This fixes a positioning problem somehow??? */
+}
 
 #experience {
   position: relative;

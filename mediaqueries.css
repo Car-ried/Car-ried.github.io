@@ -5,7 +5,7 @@
     margin-bottom: 3rem;
   }
   .about-containers {
-    flex-wrap;
+    flex-wrap: wrap;
   }
   .about-pic {
     width: 400px;
