@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Boyer – Mechanical Engineer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style-GPT.css" />
+  </head>
+  <body>
+    <!--
+      Site structure
+      The following sections outline the planned hierarchy for the entire
+      portfolio. Only the hero section is implemented at this stage.
+      1. Hero – Introduction, tagline and primary call‑to‑action.
+      2. About – Deeper biography and portrait.
+      3. Skills & Tools – List and graphic representation of Ben’s core
+         competencies.
+      4. Projects – Showcase of selected personal/professional projects
+         with images and descriptions.
+      5. Experience & Education – Chronological overview of roles and
+         academic achievements.
+      6. Contact – Simple form or call‑to‑action linking to social
+         profiles (e.g., LinkedIn, Twitter) and email.
+    -->
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="#" class="site-logo">Ben&nbsp;Boyer</a>
+        <nav class="site-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__heading">Hi, I'm Ben Boyer</h1>
+          <p class="hero__subheading">
+            Final‑year Mechanical Engineering student passionate about
+            renewable energy and aerospace. I transform ideas into
+            innovative solutions through design, analysis and hands‑on
+            prototyping.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Get in touch</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="btn btn--secondary"
+              >View LinkedIn</a
+            >
+          </div>
+        </div>
+        <div class="hero__image-wrapper">
+          <img
+            src="assets/hero.jpg"
+            alt="Portrait of Ben Boyer"
+            class="hero__image"
+            width="800"
+            height="1066"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container about__inner">
+        <div class="about__image-wrapper">
+          <img
+            src="assets/about.jpg"
+            alt="Ben Boyer outdoors"
+            class="about__image"
+            width="800"
+            height="1066"
+          />
+        </div>
+        <div class="about__content">
+          <h2 class="section-heading">About Me</h2>
+          <p>
+            I'm Ben Boyer, a final‑year Mechanical Engineering student at the
+            University of Newcastle, Australia. Over the past two years, I've
+            worked in the renewable energy sector, where I developed strong
+            technical skills and gained valuable experience in collaborative,
+            real‑world engineering environments. These experiences have shaped my
+            approach to problem‑solving and reinforced my desire to take on
+            work that pushes me further.
+          </p>
+          <p>
+            I'm especially interested in the aerospace industry, where I hope
+            to contribute to complex, high‑impact projects. I'm motivated by
+            roles that demand continuous learning, critical thinking, and the
+            ability to adapt and grow through challenging work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-heading">Skills &amp; Tools</h2>
+        <div class="skills__grid">
+          <div class="skill">
+            <h3 class="skill__title">Computer Aided Design</h3>
+            <ul class="skill__list">
+              <li>Shapr3D – Advanced</li>
+              <li>Creo – Intermediate</li>
+              <li>Fusion&nbsp;360 – Intermediate</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3 class="skill__title">Simulation &amp; Analysis</h3>
+            <ul class="skill__list">
+              <li>ANSYS – Basic</li>
+              <li>Physical testing – Basic</li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3 class="skill__title">Manufacturing</h3>
+            <ul class="skill__list">
+              <li>3D printing – Advanced</li>
+              <li>Drafting – Intermediate</li>
+              <li>Sheet metal &amp; milling – Basic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-heading">Selected Projects</h2>
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project1.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Wind Turbine Blade Optimisation</h3>
+              <p class="project-card__description">
+                Designed and analysed a small‑scale wind turbine blade using
+                advanced 3D modelling and simulation tools to improve
+                aerodynamic efficiency and structural integrity.
+              </p>
+            </div>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project2.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Solar Thermal Efficiency Study</h3>
+              <p class="project-card__description">
+                Conducted a comparative study on solar thermal collector designs
+                to evaluate performance metrics and recommend optimisation
+                strategies for commercial applications.
+              </p>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project3.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">3D‑Printed Aerospace Component</h3>
+              <p class="project-card__description">
+                Led a team project to design and fabricate a lightweight,
+                3D‑printed aerospace bracket, balancing strength, weight and
+                manufacturability constraints.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <h2 class="section-heading">Experience &amp; Education</h2>
+        <div class="timeline">
+          <div class="timeline__item">
+            <h3 class="timeline__title">Mechanical Engineering Student</h3>
+            <p class="timeline__subtitle">University of Newcastle – 2019&nbsp;–&nbsp;Present</p>
+            <p class="timeline__description">
+              Pursuing a Bachelor of Mechanical Engineering with a focus on
+              thermodynamics, aerodynamics and materials science. Active member
+              of the student aerospace club.
+            </p>
+          </div>
+          <div class="timeline__item">
+            <h3 class="timeline__title">Renewable Energy Engineer (Part‑time)</h3>
+            <p class="timeline__subtitle">CleanTech Solutions – 2023&nbsp;–&nbsp;2025</p>
+            <p class="timeline__description">
+              Supported design and testing of renewable energy systems,
+              collaborated with cross‑functional teams and contributed to
+              performance improvements in prototype builds.
+            </p>
+          </div>
+          <!-- Additional experience entries can be added here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+          <h2 class="section-heading">Get In Touch</h2>
+          <p class="contact__intro">
+            I'd love to hear from you! Whether you have an opportunity, a
+            question or just want to connect, feel free to drop me a message.
+          </p>
+          <form class="contact__form" action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+          <div class="contact__links">
+            <a href="https://www.linkedin.com" class="contact__link" target="_blank" rel="noopener"
+              >LinkedIn</a
+            >
+            <a href="https://twitter.com" class="contact__link" target="_blank" rel="noopener"
+              >Twitter/X</a
+            >
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>&copy; <span id="year"></span> Ben Boyer. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Inline script to update the year automatically -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
