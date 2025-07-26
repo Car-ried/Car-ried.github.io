@@ -4,18 +4,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      btn.blur();
+      const isAll = btn.dataset.filter === 'all';
 
+      if (isAll) {
+        // Deselect all other filters
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+      } else {
+        // Toggle individual filter
+        btn.classList.toggle('active');
+        btn.blur();
+
+        // Deselect "All" if anything else is active
+        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+        allBtn.classList.remove('active');
+      }
+
+      // Get all active filters (ignoring "all")
       const activeFilters = Array.from(filterButtons)
         .filter(b => b.classList.contains('active') && b.dataset.filter !== 'all')
         .map(b => b.dataset.filter);
 
       const showAll = activeFilters.length === 0;
 
+      // Show/hide project cards
       projectCards.forEach(card => {
-        const categories = card.dataset.category.split(' '); // split into array
-
+        const categories = card.dataset.category.split(' ');
         const matches = activeFilters.some(filter => categories.includes(filter));
 
         if (showAll || matches) {
@@ -24,14 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'none';
         }
       });
-
-      // Sync the "All" button
-      const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-      if (showAll) {
-        allBtn.classList.add('active');
-      } else {
-        allBtn.classList.remove('active');
-      }
     });
   });
 });
