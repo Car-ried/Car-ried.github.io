@@ -475,13 +475,24 @@ a {
 .timeline__description {
   font-size: 0.9rem;
   color: var(--colour-mid);
-  margin-bottom: 0;
+  margin-bottom: 0.2rem;
 }
 
 .timeline__link {
   font-size: 0.8rem;
   color: var(--colour-mid);
-  margin-bottom: 0;
+  margin-bottom: 0.4rem;
+  font-style: italic;
+}
+
+.timeline__link:hover,
+.timeline__link:focus {
+  color: var(--colour-accent);
+}
+
+.timeline__subtitle:hover,
+.timeline__subtitle:focus {
+  color: var(--colour-accent);
 }
 
 /* ------------------------------------------------------------ */
