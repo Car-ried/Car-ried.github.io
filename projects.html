@@ -54,15 +54,16 @@
         <h2 class="section-heading">All Projects</h2>
         <div id="filterBar" class="filters-bar">
           <button class="btn btn--secondary filter-btn active" data-filter="all">All</button>
-          <button class="btn btn--secondary filter-btn" data-filter="CAD">CAD</button>
-          <button class="btn btn--secondary filter-btn" data-filter="Simulation">Simulation</button>
-          <button class="btn btn--secondary filter-btn" data-filter="Prototype">Prototype</button>
-          <button class="btn btn--secondary filter-btn" data-filter="3D-Print">3D-Print</button>
-          <button class="btn btn--secondary filter-btn" data-filter="Build">Build</button>
+          <button class="btn btn--secondary filter-btn" data-filter="cad">CAD</button>
+          <button class="btn btn--secondary filter-btn" data-filter="simulation">Simulation</button>
+          <button class="btn btn--secondary filter-btn" data-filter="prototype">Prototype</button>
+          <button class="btn btn--secondary filter-btn" data-filter="3d-print">3D-Print</button>
+          <button class="btn btn--secondary filter-btn" data-filter="build">Build</button>
+          <button class="btn btn--secondary filter-btn" data-filter="testing">Testing</button>
         </div>
         <div class="projects__grid">
           <!-- Project 1 -->
-          <article class="project-card">
+          <article class="project-card" data-category="cad prototype 3d-print build">
             <div class="project-card__image-wrapper">
               <img
                 src="assets/project-1-2.png"
@@ -80,7 +81,7 @@
             </div>
           </article>
           <!-- Project 2 -->
-          <article class="project-card">
+          <article class="project-card" data-category="cad testing build">
             <div class="project-card__image-wrapper">
               <img
                 src="assets/project-2-2.png"
@@ -98,7 +99,7 @@
             </div>
           </article>
           <!-- Project 3 -->
-          <article class="project-card">
+          <article class="project-card" data-category="cad prototype 3d-print">
             <div class="project-card__image-wrapper">
               <img
                 src="assets/project-3-2.png"
