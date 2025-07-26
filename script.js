@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       btn.classList.toggle('active');
+      btn.blur();
 
       const filter = btn.dataset.filter;
       const isActive = btn.classList.contains('active');
