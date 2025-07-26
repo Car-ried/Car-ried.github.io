@@ -591,5 +591,28 @@ a {
 
 .coming-soon {
   padding: 2rem 1rem;
+  padding-bottom: 0;
   text-align: center;
+}
+
+/* ------------------------------------------------------------ */
+/* Filters */
+/* ------------------------------------------------------------ */
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: var(--colour-accent);
+  color: var(--colour-light);
 }
