@@ -478,6 +478,12 @@ a {
   margin-bottom: 0;
 }
 
+.timeline__link {
+  font-size: 0.8rem;
+  color: var(--colour-mid);
+  margin-bottom: 0;
+}
+
 /* ------------------------------------------------------------ */
 /* Contact Section */
 /* ------------------------------------------------------------ */
