@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ben Boyer | Mechanical Engineer | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo"><a href="index.html">Ben Boyer</a></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Ben Boyer</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container profile-pic">
+      <img src="./Assets/IMG_6357.jpeg" alt="Ben Boyer Profile Picture">
+    </div>
+    <div class="section__text">
+      <p class="section_text__p1">Hello, I'm</p>
+      <h1 class="title">Ben Boyer</h1>
+      <p class="section__text__p2">Mechanical Engineer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./Assets/Resume_Benjamin_Boyer.pdf')">Download CV</button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact</button>
+      </div>
+      <div id="socials-container">
+        <img src="./Assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/benjamin-boyer-47962026a'">
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get to know more</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container about-pic-container">
+        <img 
+          src="./Assets/IMG_6624.jpeg"
+          alt="Profile Picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./Assets/experience.png" alt="Experience icon" class="icon">
+            <h3>Experience</h3>
+            <p>2+ years <br />Industry Experience</p>
+          </div>
+          <div class="details-container">
+            <img src="./Assets/education.png" alt="Education icon" class="icon">
+            <h3>Education</h3>
+            <p>Final Year <br>B.Eng. Bachelors Degree</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            I'm Ben Boyer, a final-year Mechanical Engineering student at the University of Newcastle, Australia. Over the past two years, I’ve worked in the renewable energy sector, where I developed strong technical skills and gained valuable experience in collaborative, real-world engineering environments. These experiences have shaped my approach to problem-solving and reinforced my desire to take on work that pushes me further. I’m especially interested in the aerospace industry, where I hope to contribute to complex, high-impact projects. I'm motivated by roles that demand continuous learning, critical thinking, and the ability to adapt and grow through challenging work.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Design</h2>
+          <div class="article-container">
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>ANSYS</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Creo</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Shapr3D</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Fusion360</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Drafting</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>3D Printing</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Sheet Metal</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Milling</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/checkmark.png" alt="Experience icon" class="icon">
+              <div>
+                <h3>Physical Testing</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="project-grid-container">
+        <div class="project-img">
+          <img src="./Assets/project-1-2.png" alt="Project 1" class="project-img">
+        </div>
+        <div class="project-description-container">
+          <h2 class="experience-sub-title project-title">Custom Cold-Air Intake</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non velit sed orci sagittis accumsan a a tortor. Ut elementum tincidunt odio condimentum pharetra. Etiam auctor, nisi non aliquam pulvinar, risus nulla ornare magna, ac facilisis massa lorem vel enim. Duis lectus orci, iaculis id placerat at, lobortis in enim.</p>
+          <button class="btn btn-color-2 project-btn">Dive Deeper</button>
+        </div>
+        <div class="project-img">
+          <img src="./Assets/project-2-2.png" alt="Project 2" class="project-img">
+        </div>
+        <div class="project-description-container">
+          <h2 class="experience-sub-title project-title">Adjustable Pinning Board</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non velit sed orci sagittis accumsan a a tortor. Ut elementum tincidunt odio condimentum pharetra. Etiam auctor, nisi non aliquam pulvinar, risus nulla ornare magna, ac facilisis massa lorem vel enim. Duis lectus orci, iaculis id placerat at, lobortis in enim.</p>
+          <button class="btn btn-color-2 project-btn">Dive Deeper</button>
+        </div>
+        <div class="project-img">
+          <img src="./Assets/project-3-2.png" alt="Project 3" class="project-img">
+        </div>
+        <div class="project-description-container">
+          <h2 class="experience-sub-title project-title">Custom Workbench</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non velit sed orci sagittis accumsan a a tortor. Ut elementum tincidunt odio condimentum pharetra. Etiam auctor, nisi non aliquam pulvinar, risus nulla ornare magna, ac facilisis massa lorem vel enim. Duis lectus orci, iaculis id placerat at, lobortis in enim.</p>
+          <button class="btn btn-color-2 project-btn">Dive Deeper</button>
+        </div>
+      </div>
+    </div>
+    <img src="./Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./Assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+        <p><a href="mailto:benboyer369@gmail.com">benboyer369@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./Assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+        <p><a href="https://www.linkedin.com/in/benjamin-boyer-47962026a/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./index-GPT.html">Testing Ground</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Ben Boyer. All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
