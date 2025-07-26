@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Boyer – Mechanical Engineer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+      Site structure
+      The following sections outline the planned hierarchy for the entire
+      portfolio. Only the hero section is implemented at this stage.
+      1. Hero – Introduction, tagline and primary call‑to‑action.
+      2. About – Deeper biography and portrait.
+      3. Skills & Tools – List and graphic representation of Ben’s core
+         competencies.
+      4. Projects – Showcase of selected personal/professional projects
+         with images and descriptions.
+      5. Experience & Education – Chronological overview of roles and
+         academic achievements.
+      6. Contact – Simple form or call‑to‑action linking to social
+         profiles (e.g., LinkedIn, Twitter) and email.
+    -->
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="site-logo">Ben&nbsp;Boyer</a>
+        <nav class="site-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-heading">Project Showcase</h2>
+        <div class="projects__grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project-1-2.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Custom Cold-Air Intake</h3>
+              <p class="project-card__description">
+                Designed and built a custom carbon fibre intake for a Mk7.5 Golf GTI, developing skills in Fusion 360 forms, product design, 3D scanning, and composite fabrication.
+              </p>
+            </div>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project-2-2.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">MMSF Tensile Load Limiter</h3>
+              <p class="project-card__description">
+                Metal Matrix Syntactic Foams (MMSF's) are useful for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism allowing for the precise control of an activation threshold.
+              </p>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img
+                src="assets/project-3-2.png"
+                alt="Abstract project placeholder"
+                class="project-card__image"
+                width="640"
+                height="480"
+              />
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Print-In-Place Gimbal</h3>
+              <p class="project-card__description">
+                A short project allowing for the a gimballing mechanism, similiar to those found in aerospace applications, to be 3D-Printed all at once, with little to no post processing required.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="coming-soon">
+          <h3 class="project-card__title">Coming soon..</h3>
+          <p class="project-card__description">New projects will get added here!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>&copy; <span id="year"></span> Ben Boyer. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Inline script to update the year automatically -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
