@@ -145,12 +145,14 @@ a {
   border-color: var(--colour-accent);
 }
 
+/* DEPRACATED
 .btn--secondary:hover,
 .btn--secondary:focus {
   background-color: var(--colour-accent);
   color: var(--colour-light);
   box-shadow: 0 4px 6px var(--shadow-colour);
 }
+*/
 
 /* Hero Image */
 .hero__image-wrapper {
