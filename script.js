@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Fix lingering :focus styles on mobile
       btn.blur();
+      void btn.offsetHeight;
 
       // Update project card visibility
       updateProjectsDisplay();
