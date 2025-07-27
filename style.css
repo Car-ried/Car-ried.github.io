@@ -624,6 +624,11 @@ a {
   color: var(--colour-light);
 }
 
+button:focus {
+  outline: 4px solid red !important;
+  background: yellow !important;
+}
+
 /* DEPRACATED
 .btn--secondary:not(.active):focus {
   background-color: var(--colour-accent-light);
