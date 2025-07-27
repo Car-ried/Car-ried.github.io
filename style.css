@@ -626,20 +626,14 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
+.project-card-max {
+  max-width: 380px;
+  margin-inline-start: 0;
+}
 
 @media (max-width: 768px) {
   .project-card-max {
-    max-width: 350px;
-    margin: auto;
+    margin-inline: auto;
   }
 }
 
-.all-project-card__content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.all-project-card__description {
-  flex-grow: 1;
-}
