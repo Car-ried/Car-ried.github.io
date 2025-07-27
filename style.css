@@ -622,26 +622,15 @@ a {
 /* ------------------------------------------------------------ */
 
 .all-projects__grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.project-card-max {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 30%;
-  max-width: 1fr;
-  min-width: 280px;
-  align-self: stretch;
-}
 
 @media (max-width: 768px) {
-  .all-projects__grid {
-    justify-content: center;
-  }
-  .projects-card-max {
-    max-width: 30%;
+  .project-card-max {
+    max-width: 350px;
+    margin: auto;
   }
 }
 
