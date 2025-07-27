@@ -616,3 +616,22 @@ a {
   background-color: var(--colour-accent);
   color: var(--colour-light);
 }
+
+/* ------------------------------------------------------------ */
+/* Projects */
+/* ------------------------------------------------------------ */
+
+.all-projects__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.project-card-max {
+  flex: 1 1 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
