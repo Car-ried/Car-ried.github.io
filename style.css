@@ -631,8 +631,18 @@ a {
   display: flex;
   flex-direction: column;
   flex: 1 1 30%;
-  max-width: 30%;
+  max-width: 1fr;
+  min-width: 280px;
   align-self: stretch;
+}
+
+@media (max-width: 768px) {
+  .all-projects__grid {
+    justify-content: center;
+  }
+  .projects-card-max {
+    max-width: 30%;
+  }
 }
 
 .all-project-card__content {

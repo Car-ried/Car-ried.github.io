@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Show/hide project cards
       projectCards.forEach(card => {
         const categories = card.dataset.category.split(' ');
-        const matches = activeFilters.some(filter => categories.includes(filter));
+        const matches = activeFilters.every(filter => categories.includes(filter));
 
         if (showAll || matches) {
           card.style.display = 'block';
