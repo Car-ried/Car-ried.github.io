@@ -30,26 +30,27 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.toggle('active');
 
         // If any filters are now active, deselect "All"
-        const otherFiltersActive = Array.from(filterButtons)
+        const anyOtherActive = Array.from(filterButtons)
           .some(b => b.classList.contains('active') && b !== allBtn);
 
-        if (otherFiltersActive) {
+        if (anyOtherActive) {
           allBtn.classList.remove('active');
         } else {
           allBtn.classList.add('active');
         }
       }
 
-      // Fix lingering :focus styles on mobile
-        setTimeout(() => {
-          btn.blur();
-          void btn.offsetHeight; // force reflow
-        }, 0);
+      // Fix mobile browsers' stuck :focus styles
+      setTimeout(() => {
+        btn.blur();
+        void btn.offsetHeight; // Force reflow
+      }, 0);
 
-      // Update project card visibility
+      // Update project visibility
       updateProjectsDisplay();
     });
   });
 });
+
 
 
