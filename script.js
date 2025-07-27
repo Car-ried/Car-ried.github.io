@@ -68,6 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
       updateProjectsDisplay();
     });
   });
+  
+  const hamburger = document.querySelector('.hamburger');
+  const navList   = document.querySelector('.nav-list');
+
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  }
 });
 
 
