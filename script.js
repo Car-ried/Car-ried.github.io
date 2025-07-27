@@ -41,8 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Fix lingering :focus styles on mobile
-      btn.blur();
-      void btn.offsetHeight;
+        setTimeout(() => {
+          btn.blur();
+          void btn.offsetHeight; // force reflow
+        }, 0);
 
       // Update project card visibility
       updateProjectsDisplay();
