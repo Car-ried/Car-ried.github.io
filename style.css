@@ -624,14 +624,23 @@ a {
 .all-projects__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: stretch;
 }
 
 .project-card-max {
-  flex: 1 1 280px;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30%;
+  max-width: 30%;
+  align-self: stretch;
+}
+
+.all-project-card__content {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.all-project-card__description {
+  flex-grow: 1;
 }
