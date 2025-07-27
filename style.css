@@ -288,7 +288,7 @@ a {
   display: none;             /* show only on small screens */
   flex-direction: column;
   justify-content: space-between;
-  width: 1.5rem;
+  width: 1.8rem;
   height: 1.2rem;
   background: none;
   border: none;
@@ -308,11 +308,32 @@ a {
   margin-left: 1rem;
 }
 
+/* Desktop layout: align nav and contact on the right and hide the hamburger */
+@media (min-width: 769px) {
+  .site-nav {
+    margin-left: auto; /* push nav list to the right of the logo */
+  }
+  .hamburger {
+    display: none;    /* no hamburger on large screens */
+  }
+  .contact-btn {
+    margin-left: 1rem;
+  }
+}
+
 /* Responsive behaviour */
 @media (max-width: 768px) {
+  
+  /* Position the nav relative so the dropdown appears below it */
+  .site-nav {
+    position: relative;
+  }
+
   /* Hide the inline nav list and show hamburger */
-  .nav-list {
+  .site-nav .nav-list {
+    /* more specific selector overrides the existing display:flex */
     position: absolute;
+    width: fit-content;
     top: 100%;
     left: 0;
     right: 0;
@@ -325,16 +346,13 @@ a {
   }
 
   /* When open, display the menu */
-  .nav-list.open {
+  .site-nav .nav-list.open {
     display: flex;
-  }
-
-  .site-nav {
-    position: relative;
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* show the hamburger on small screens */
+    justify-self: right;
   }
 
   /* Tuck the contact button next to the hamburger */
@@ -342,11 +360,7 @@ a {
     display: inline-block;
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
-  }
-
-  /* Hide the standard horizontal layout */
-  .site-nav .nav-list {
-    margin-left: 0;
+    margin-left: 1rem;
   }
 }
 
