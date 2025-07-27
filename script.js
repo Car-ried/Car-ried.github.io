@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const hamburger = document.querySelector('.hamburger');
   const navList   = document.querySelector('.nav-list');
+  
+  console.log('hamburger exists?', !!hamburger, 'nav-list exists?', !!navList);
 
   if (hamburger && navList) {
     hamburger.addEventListener('click', () => {

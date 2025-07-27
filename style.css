@@ -315,6 +315,7 @@ a {
   }
   .hamburger {
     display: none;    /* no hamburger on large screens */
+    margin-left: 0;
   }
   .contact-btn {
     margin-left: 1rem;
@@ -334,6 +335,7 @@ a {
     /* more specific selector overrides the existing display:flex */
     position: absolute;
     width: fit-content;
+    min-width: 6rem;
     top: 100%;
     left: 0;
     right: 0;
