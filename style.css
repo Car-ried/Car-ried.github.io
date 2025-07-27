@@ -366,6 +366,13 @@ a {
   }
 }
 
+@media (max-width: 320px) {
+  .contact-btn {
+    display: none;
+  }
+}
+
+
 
 /* ------------------------------------------------------------ */
 /* About Section */
