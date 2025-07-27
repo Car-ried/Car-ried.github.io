@@ -2,6 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  
+  // Disable :focus styles for .btn--secondary on touch devices (fixes iOS/Android)
+  function disableFocusStylingOnTouchDevices() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      const style = document.createElement('style');
+      style.textContent = `
+        .btn--secondary:focus {
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: inherit !important;
+          color: inherit !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+  disableFocusStylingOnTouchDevices();
+
 
   function updateProjectsDisplay() {
     const activeFilters = Array.from(filterButtons)

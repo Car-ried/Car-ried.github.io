@@ -623,12 +623,15 @@ a {
   background-color: var(--colour-accent);
   color: var(--colour-light);
 }
+
+/* DEPRACATED
 .btn--secondary:not(.active):focus {
   background-color: var(--colour-accent-light);
   color: var(--colour-accent);
   box-shadow: none;
   outline: none;
 }
+*/
 
 
 /* ------------------------------------------------------------ */
