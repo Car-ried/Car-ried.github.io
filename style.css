@@ -725,6 +725,10 @@ a {
   }
 }
 
+.project-card--hidden {
+  display: none !important;
+}
+
 /* DEPRACATED
 .btn--secondary:not(.active):focus {
   background-color: var(--colour-accent-light);
@@ -742,6 +746,20 @@ a {
 .all-projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* Makes all cards in a row equal height */
+  justify-items: start; /* Ensures left alignment on the last row */
+}
+
+.all-projects__grid > a {
+  flex: 0 0 280px;
+  display: flex;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-card-max {

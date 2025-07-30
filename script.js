@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  const grid = document.getElementById("project-grid");
+
+    // Dynamically build each project tile
+    Object.entries(projectData).forEach(([slug, project]) => {
+    // Ensure required tile data is present
+    if (!project.tileTitle || !project.tileDescription || !project.tileImage) return;
+
+    const categories = project.dataCategory || "uncategorized";
+    const tile = document.createElement("a");
+    tile.href = `projectDetails.html?slug=${slug}&from=projects.html`;
+    tile.innerHTML = `
+      <article class="project-card project-card-max" data-category="${categories}">
+        <div class="project-card__image-wrapper">
+          <img
+            src="${project.tileImage}"
+            alt="${project.tileAlt || project.tileTitle}"
+            class="project-card__image"
+            width="640"
+            height="480"
+          />
+        </div>
+        <div class="project-card__content">
+          <h3 class="project-card__title">${project.tileTitle}</h3>
+          <p class="project-card__description">${project.tileDescription}</p>
+        </div>
+      </article>
+    `;
+    grid.appendChild(tile);
+  });
+  
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
@@ -27,12 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(b => b.dataset.filter);
 
     const showAll = activeFilters.length === 0;
+    
+    const projectLinks = document.querySelectorAll('#project-grid > a');
 
-    projectCards.forEach(card => {
+    projectLinks.forEach(link => {
+      const card = link.querySelector('.project-card');
       const categories = card.dataset.category.split(' ');
       const matches = activeFilters.every(f => categories.includes(f));
-      card.style.display = showAll || matches ? 'block' : 'none';
+      link.classList.toggle('project-card--hidden', !(showAll || matches));
     });
+
+
   }
 
   filterButtons.forEach(btn => {
@@ -82,6 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-
 

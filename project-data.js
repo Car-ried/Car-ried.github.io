@@ -10,9 +10,15 @@ window.projectData = {
   /* TEMPLATE ------------------------------
   
   "PROJECT-NAME": {
+    tileTitle: "TILE TITLE",
+    tileDescription: "TILE DESCRIPTION",
+    tileImage: "Assets/project-X.png",
+    tileAlt: "ALT TEXT",
+    dataCategory: "cad simulation prototype 3d-print build testing",
+    
     title: "PROJECT TITLE",
     subtitle: "PROJECT SUB TITLE",
-    heroImage: "Assets/PROJECT-X.png",
+    heroImage: "Assets/project-X.png",
     heroAlt: "ALT TEXT",
     overview:
       "PROJECT OVERVIEW",
@@ -45,6 +51,12 @@ window.projectData = {
   // -------------------------------------------------------
   
   "custom-cold-air-intake": {
+    tileTitle: "Custom Cold-Air Intake",
+    tileDescription: "Designed and built a custom carbon fibre intake for a Mk7.5 Golf GTI, developing skills in Fusion 360 forms, product design, 3D scanning, and composite fabrication.",
+    tileImage: "Assets/project-1.png",
+    tileAlt: "CAD rendering of the custom cold-air intake on a Golf GTI engine bay",
+    dataCategory: "cad prototype 3d-print build",
+    
     title: "Custom Cold-Air Intake",
     subtitle: "Mk7.5 Golf GTI Carbon Fibre Intake",
     heroImage: "Assets/project-1.png",
@@ -81,6 +93,12 @@ window.projectData = {
     ]
   },
   "mmsf-tensile-load-limiter": {
+    tileTitle: "MMSF Tensile Load Limiter",
+    tileDescription: "Metal Matrix Syntactic Foams (MMSF's) are useful for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism allowing for the precise control of an activation threshold.",
+    tileImage: "Assets/project-2.png",
+    tileAlt: "CAD assembly of the MMSF tensile load limiter",
+    dataCategory: "cad testing build",
+    
     title: "MMSF Tensile Load Limiter",
     subtitle: "Energy Absorption Test Apparatus",
     heroImage: "Assets/project-2.png",
@@ -113,6 +131,12 @@ window.projectData = {
     ]
   },
   "print-in-place-gimbal": {
+    tileTitle: "Print-In-Place Gimbal",
+    tileDescription: "A short project allowing for the a gimballing mechanism, similiar to those found in aerospace applications, to be 3D-Printed all at once, with little to no post processing required.",
+    tileImage: "Assets/project-3.png",
+    tileAlt: "Rendered image of the print-in-place gimbal",
+    dataCategory: "cad prototype 3d-print",
+    
     title: "Print-In-Place Gimbal",
     subtitle: "3D-Printed Gimbal Mechanism",
     heroImage: "Assets/project-3.png",
@@ -145,6 +169,12 @@ window.projectData = {
     ]
   },
   "custom-workbench": {
+    tileTitle: "Custom Workbench",
+    tileDescription: "A custom made workbench providing more space and allowing more ambitious projects. Designed and built with my brother.",
+    tileImage: "Assets/project-4.png",
+    tileAlt: "Photo of the custom timber workbench",
+    dataCategory: "build",
+    
     title: "Custom Workbench",
     subtitle: "Timber Fabrication Project",
     heroImage: "Assets/project-4.png",
@@ -176,34 +206,44 @@ window.projectData = {
       }
     ]
   },
-  
-  "coming-soon": {
-    title: "Coming Soon",
-    subtitle: "New projects will get added here!",
-    heroImage: "Assets/sad.png",
-    heroAlt: "Photo of the custom timber workbench",
+  "omni-wheel-robot": {
+    tileTitle: "OMNI-Wheel Robot",
+    tileDescription: "A 3D-printed omni-directional robot with simple Arduino control.",
+    tileImage: "Assets/project-5.png",
+    tileAlt: "Completed OMNI-Wheel Robot",
+    dataCategory: "cad prototype 3d-print build",
+    
+    title: "OMNI-Wheel Robot",
+    subtitle: "An Omni-Directional Robot Using 3D-Printable Wheels",
+    heroImage: "Assets/project-5.png",
+    heroAlt: "Completed OMNI-Wheel Robot",
     overview:
-      "",
+      "A budget-friendly, omni-directional robot built using 3D-printed wheels, salvaged electronics, and an Arduino. The robot can move in any planar direction—forward, sideways, and diagonally—thanks to linked omni-wheels, despite not supporting rotation due to motor driver limitations.",
     designMotivation:
-      "",
+      "This project was motivated by a desire to experiment with unconventional drive systems and explore the mechanical principles behind omni-directional movement. I wanted to build something hands-on that combined 3D printing with real-world electronics—without relying on expensive hardware.",
     problem:
-      "",
+      "Traditional robots using fixed-direction wheels are limited in how they maneuver. Achieving smooth, multi-directional motion often requires complex control systems and expensive components. I wanted to explore how far I could get with minimal tools and a constrained budget.",
     solution:
-      "",
+      "Using 3D-printed omni-wheels and a basic two-channel motor driver, I created a mechanically simple robot where each side's wheels are linked. This allowed for fluid planar movement across a surface. An Arduino handles basic motor control, with no rotation control due to the two-motor constraint. Despite the limited control, the robot is highly maneuverable and effective for demonstrating omni-directional motion.",
     skills: [
-      ""
+      "3D Design & Printing",
+      "Arduino Prototyping",
+      "Basic Motor Control",
+      "Resourceful Hacking",
+      "Mechanical Assembly"
     ],
     lessons:
-      "",
+      "This project taught me how to work creatively within hardware limitations. I learned how omni-wheels function mechanically, how to repurpose old electronics, and how simplifying a control system doesn't mean sacrificing functionality. It also reinforced the value of iteration and physical prototyping.",
     gallery: [
       {
-        src: "",
-        alt: ""
+        src: "Assets/omni-wheel-closeup.png",
+        alt: "Close-up of 3D-printed omni wheel"
       },
       {
-        src: "",
-        alt: ""
+        src: "Assets/omni-wheel-chassis.png",
+        alt: "Chassis showing Arduino and motor driver mounted"
       }
     ]
   }
+
 };
