@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details – Ben Boyer</title>
+    <!-- Import the existing portfolio styles so the page inherits the same look and feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Custom styles for the project detail page -->
+    <style>
+      /* The project hero section uses generous padding and centres its content.
+         It borrows colours and typography from the main stylesheet so it
+         automatically harmonises with the rest of the site. */
+      .project-hero {
+        background-color: var(--colour-bg);
+        padding: 4rem 0;
+        text-align: center;
+      }
+      .project-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .project-hero p {
+        max-width: 40em;
+        margin: 0 auto 1.5rem auto;
+        font-size: 1.125rem;
+        color: var(--colour-mid);
+      }
+      .project-hero img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 8px var(--shadow-colour);
+      }
+
+      /* Generic section styling – reuse the portfolio section heading style */
+      .project-section {
+        padding: 3rem 0;
+        background-color: var(--colour-light);
+      }
+      .project-section:nth-child(even) {
+        background-color: var(--colour-bg);
+      }
+      .project-section h2.section-heading {
+        margin-bottom: 1rem;
+      }
+      .project-section p,
+      .project-section ul {
+        max-width: 60em;
+        margin: 0 auto 1rem auto;
+        font-size: 1rem;
+        color: var(--colour-mid);
+      }
+      .project-section ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+      }
+
+      /* Gallery grid to showcase additional photos or diagrams */
+      .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .project-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.375rem;
+        box-shadow: 0 2px 8px var(--shadow-colour);
+      }
+
+      /* Back link styling */
+      .project-back {
+        text-align: center;
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation copied from the main site to ensure consistency -->
+    <header class="site-header">
+      <div class="container header__inner">
+        <a href="index.html" class="site-logo">Ben&nbsp;Boyer</a>
+         
+         <!-- Hamburger toggle (hidden on large screens) -->
+         <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+           <span class="hamburger__line"></span>
+           <span class="hamburger__line"></span>
+           <span class="hamburger__line"></span>
+         </button>
+         
+         <nav class="site-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="./index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="./index.html#skills" class="nav-link">Skills</a></li>
+            <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="./index.html#experience" class="nav-link">Experience</a></li>
+          </ul>
+        </nav>
+        
+        <a href="./index.html#contact" class="btn btn--primary contact-btn">Contact</a>
+      </div>
+    </header>
+    <main>
+      <!-- Hero section populated by JavaScript -->
+      <section class="project-hero">
+        <div class="container">
+          <h1 id="project-title"></h1>
+          <p id="project-subtitle"></p>
+          <img id="project-hero-image" src="" alt="" />
+        </div>
+      </section>
+      <!-- Overview / introduction -->
+      <section class="project-section" id="overview-section">
+        <div class="container">
+          <h2 class="section-heading">Overview</h2>
+          <p id="project-overview"></p>
+        </div>
+      </section>
+      <!-- Design motivation -->
+      <section class="project-section" id="motivation-section">
+        <div class="container">
+          <h2 class="section-heading">Design Motivation</h2>
+          <p id="project-motivation"></p>
+        </div>
+      </section>
+      <!-- Problem statement -->
+      <section class="project-section" id="problem-section">
+        <div class="container">
+          <h2 class="section-heading">Problem</h2>
+          <p id="project-problem"></p>
+        </div>
+      </section>
+      <!-- Solution / approach -->
+      <section class="project-section" id="solution-section">
+        <div class="container">
+          <h2 class="section-heading">Solution</h2>
+          <p id="project-solution"></p>
+        </div>
+      </section>
+      <!-- Skills & tools used -->
+      <section class="project-section" id="skills-section">
+        <div class="container">
+          <h2 class="section-heading">Skills &amp; Tools Used</h2>
+          <ul id="project-skills"></ul>
+        </div>
+      </section>
+      <!-- Lessons learned -->
+      <section class="project-section" id="lessons-section">
+        <div class="container">
+          <h2 class="section-heading">Lessons Learned</h2>
+          <p id="project-lessons"></p>
+        </div>
+      </section>
+      <!-- Optional gallery -->
+      <section class="project-section" id="gallery-section">
+        <div class="container">
+          <h2 class="section-heading">Gallery</h2>
+          <div class="project-gallery" id="project-gallery"></div>
+        </div>
+      </section>
+      <!-- Back link -->
+      <div class="project-back">
+        <a id="back-button" class="btn btn--secondary">← Back</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> Ben Boyer. All rights reserved.</p>
+      </div>
+    </footer>
+    
+    <!-- Import the project data and page script -->
+    <script src="project-data.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Helper: parse query parameters
+      function getQueryParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+      }
+      // Populate page with project data
+      function populateProject() {
+        const slug = getQueryParam('slug');
+        const project = window.projectData && window.projectData[slug];
+        if (!project) {
+          // If unknown slug, show a friendly message
+          document.getElementById('project-title').textContent = 'Project not found';
+          document.getElementById('project-subtitle').textContent = '';
+          document.getElementById('project-hero-image').style.display = 'none';
+          document.getElementById('overview-section').style.display = 'none';
+          document.getElementById('motivation-section').style.display = 'none';
+          document.getElementById('problem-section').style.display = 'none';
+          document.getElementById('solution-section').style.display = 'none';
+          document.getElementById('skills-section').style.display = 'none';
+          document.getElementById('lessons-section').style.display = 'none';
+          document.getElementById('gallery-section').style.display = 'none';
+          return;
+        }
+        document.title = `${project.title} – Ben Boyer`;
+        document.getElementById('project-title').textContent = project.title;
+        document.getElementById('project-subtitle').textContent = project.subtitle || '';
+        const heroImg = document.getElementById('project-hero-image');
+        heroImg.src = project.heroImage;
+        heroImg.alt = project.heroAlt || project.title;
+        document.getElementById('project-overview').textContent = project.overview;
+        document.getElementById('project-motivation').textContent = project.designMotivation;
+        document.getElementById('project-problem').textContent = project.problem;
+        document.getElementById('project-solution').textContent = project.solution;
+        document.getElementById('project-lessons').textContent = project.lessons;
+        // Populate skills list
+        const skillsList = document.getElementById('project-skills');
+        skillsList.innerHTML = '';
+        if (Array.isArray(project.skills)) {
+          project.skills.forEach(skill => {
+            const li = document.createElement('li');
+            li.textContent = skill;
+            skillsList.appendChild(li);
+          });
+        }
+        // Populate gallery
+        const gallery = document.getElementById('project-gallery');
+        gallery.innerHTML = '';
+        if (Array.isArray(project.gallery) && project.gallery.length > 0) {
+          project.gallery.forEach(imgObj => {
+            const img = document.createElement('img');
+            img.src = imgObj.src;
+            img.alt = imgObj.alt || '';
+            gallery.appendChild(img);
+          });
+        } else {
+          // If no gallery provided, hide the section
+          document.getElementById('gallery-section').style.display = 'none';
+        }
+      }
+      
+      // Initialise the page once DOM is ready
+      window.addEventListener('DOMContentLoaded', populateProject);
+      
+      window.addEventListener('DOMContentLoaded', () => {
+        const fromPage = getQueryParam('from');
+        const backBtn = document.getElementById('back-button');
+
+        if (backBtn) {
+          if (fromPage) {
+            backBtn.setAttribute('href', fromPage.includes('.html') ? fromPage : `./${fromPage}`);
+            backBtn.textContent = '← Back';
+          } else {
+            backBtn.setAttribute('href', 'projects.html');
+            backBtn.textContent = '← Back to all projects';
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
