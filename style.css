@@ -475,6 +475,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
 .project-card {
@@ -484,6 +485,7 @@ a {
   box-shadow: 0 2px 8px var(--shadow-colour);
   display: flex;
   flex-direction: column;
+  height: 100%;
   transition: transform 0.2s ease;
 }
 

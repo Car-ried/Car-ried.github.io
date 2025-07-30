@@ -251,7 +251,16 @@
 
         if (backBtn) {
           if (fromPage) {
-            backBtn.setAttribute('href', fromPage.includes('.html') ? fromPage : `./${fromPage}`);
+            let backHref = fromPage;
+
+            // Append #projects if user came from index.html
+            if (fromPage === 'index.html') {
+              backHref = 'index.html#projects';
+            } else if (!fromPage.includes('.html')) {
+              backHref = `./${fromPage}`;
+            }
+
+            backBtn.setAttribute('href', backHref);
             backBtn.textContent = '← Back';
           } else {
             backBtn.setAttribute('href', 'projects.html');
