@@ -1,20 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-  const grid = document.getElementById("project-grid");
+  // Hamburger nav setup (runs on all pages)
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
 
-    // Dynamically build each project tile
-    Object.entries(projectData).forEach(([slug, project]) => {
-    // Ensure required tile data is present
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  }
+
+  // Guard clause: only run project tile/filter logic if grid exists
+  const grid = document.getElementById("project-grid");
+  if (!grid) return;
+
+  // ==== Only runs on projects.html ====
+  Object.entries(projectData).forEach(([slug, project]) => {
     if (!project.tileTitle || !project.tileDescription || !project.tileImage) return;
 
     const categories = project.dataCategory || "uncategorized";
     const tile = document.createElement("a");
-      
-    //tile.href = `projectDetails.html?slug=${slug}&from=projects.html`;
-    // DEBUG - UNDER CONSTRUCTION REDIRECT
     tile.href = `projectDetails.html?slug=coming-soon&from=projects.html`;
-      
-      
+
     tile.innerHTML = `
       <article class="project-card project-card-max" data-category="${categories}">
         <div class="project-card__image-wrapper">
@@ -34,28 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     grid.appendChild(tile);
   });
-  
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-  
-  // Disable :focus styles for .btn--secondary on touch devices (fixes iOS/Android)
-  function disableFocusStylingOnTouchDevices() {
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      const style = document.createElement('style');
-      style.textContent = `
-        .btn--secondary:focus {
-          outline: none !important;
-          box-shadow: none !important;
-          background-color: inherit !important;
-          color: inherit !important;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }
-  disableFocusStylingOnTouchDevices();
 
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
 
   function updateProjectsDisplay() {
     const activeFilters = Array.from(filterButtons)
@@ -63,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(b => b.dataset.filter);
 
     const showAll = activeFilters.length === 0;
-    
     const projectLinks = document.querySelectorAll('#project-grid > a');
 
     projectLinks.forEach(link => {
@@ -72,8 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const matches = activeFilters.every(f => categories.includes(f));
       link.classList.toggle('project-card--hidden', !(showAll || matches));
     });
-
-
   }
 
   filterButtons.forEach(btn => {
@@ -81,14 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const isAll = btn === allBtn;
 
       if (isAll) {
-        // Clear all other active filters and select "All"
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
       } else {
-        // Toggle the clicked filter
         btn.classList.toggle('active');
 
-        // If any filters are now active, deselect "All"
         const anyOtherActive = Array.from(filterButtons)
           .some(b => b.classList.contains('active') && b !== allBtn);
 
@@ -99,28 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Fix mobile browsers' stuck :focus styles
       setTimeout(() => {
         btn.blur();
-        void btn.offsetHeight; // Force reflow
+        void btn.offsetHeight;
       }, 0);
 
-      // Update project visibility
       updateProjectsDisplay();
     });
   });
-  
-  const hamburger = document.querySelector('.hamburger');
-  const navList   = document.querySelector('.nav-list');
-  
-  console.log('hamburger exists?', !!hamburger, 'nav-list exists?', !!navList);
-
-  if (hamburger && navList) {
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-      navList.classList.toggle('open');
-    });
-  }
 });
+
 
