@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             class="project-card__image"
             width="640"
             height="480"
+            loading="lazy"
           />
         </div>
         <div class="project-card__content">

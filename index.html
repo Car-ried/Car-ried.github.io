@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ben Boyer - Mechanical Engineer Portfolio</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Portfolio of Ben Boyer – final-year Mechanical Engineering student focused on aerospace, design, and prototyping. Explore CAD, simulation and real-world project work.">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Ben Boyer – Mechanical Engineer Portfolio" />
+    <meta property="og:description" content="Final-year Mechanical Engineering student passionate about aerospace and hands-on problem-solving. View my projects and experience." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benboyer.au/" />
+    <meta property="og:image" content="https://benboyer.au/Assets/social-preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ben Boyer – Mechanical Engineer Portfolio" />
+    <meta name="twitter:description" content="Explore my engineering portfolio with hands-on projects in CAD, prototyping, and design. Based in Australia." />
+    <meta name="twitter:image" content="https://benboyer.au/Assets/social-preview.jpg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,13 +55,13 @@
         <a href="index.html" class="site-logo">Ben&nbsp;Boyer</a>
          
          <!-- Hamburger toggle (hidden on large screens) -->
-         <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+         <button class="hamburger" aria-label="Toggle site navigation" aria-controls="site-navigation" aria-expanded="false">
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
          </button>
          
-         <nav class="site-nav">
+         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="nav-item"><a href="./index.html#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="./index.html#skills" class="nav-link">Skills</a></li>
@@ -56,259 +73,269 @@
         <a href="./index.html#contact" class="btn btn--primary contact-btn">Contact</a>
       </div>
     </header>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__heading">Hi, I'm Ben Boyer</h1>
-          <p class="hero__subheading">
-            Final-year Mechanical Engineering student passionate about solving challenging technical problems with purpose. I transform ideas into practical solutions through design, analysis and hands-on prototyping.
-          </p>
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Get in touch</a>
-            <a 
-               href="Assets/BenBoyer_Resume_300725.pdf" 
-               target="_blank" 
-               rel="noopener" 
-               class="btn btn--secondary"
-              >Download CV
-            </a>
-          </div>
-        </div>
-        <div class="hero__image-wrapper">
-          <img
-            src="Assets/hero.jpg"
-            alt="Portrait of Ben Boyer"
-            class="hero__image"
-            width="800"
-            height="1066"
-          />
-        </div>
-      </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container about__inner">
-        <div class="about__image-wrapper">
-          <img
-            src="Assets/about.jpg"
-            alt="Ben Boyer outdoors"
-            class="about__image"
-            width="800"
-            height="1066"
-          />
-        </div>
-        <div class="about__content">
-          <h2 class="section-heading">About Me</h2>
-          <p>
-            I'm Ben Boyer, a final‑year Mechanical Engineering student at the
-            University of Newcastle, Australia. Over the past two years, I've
-            worked in the renewable energy sector, where I developed strong
-            technical skills and gained valuable experience in collaborative,
-            real-world engineering environments. These experiences have shaped my
-            approach to problem-solving and reinforced my desire to take on
-            work that pushes me further.
-          </p>
-          <p>
-            I'm especially interested in the aerospace industry, where I hope
-            to contribute to complex, high-impact projects. I'm motivated by
-            roles that demand continuous learning, critical thinking, and the
-            ability to adapt and grow through challenging work.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2 class="section-heading">Skills &amp; Tools</h2>
-        <div class="skills__grid">
-          <div class="skill">
-            <h3 class="skill__title">Computer Aided Design</h3>
-            <ul class="skill__list">
-              <li>Shapr3D – Advanced</li>
-              <li>Creo Parametric – Intermediate</li>
-              <li>Fusion&nbsp;360 – Intermediate</li>
-              <li>Onshape - Intermediate</li>
-            </ul>
-          </div>
-          <div class="skill">
-            <h3 class="skill__title">Simulation &amp; Analysis</h3>
-            <ul class="skill__list">
-              <li>ANSYS – Basic</li>
-              <li>Physical testing – Basic</li>
-            </ul>
-          </div>
-          <div class="skill">
-            <h3 class="skill__title">Manufacturing</h3>
-            <ul class="skill__list">
-              <li>3D printing – Advanced</li>
-              <li>Drafting – Intermediate</li>
-              <li>Sheet metal &amp; milling – Basic</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-heading">Project Showcase</h2>
-        <div class="projects__grid">
-         
-          <!-- Project 1 -->
-          <a href="projectDetails.html?slug=not-found&from=index.html">
-            <article class="project-card">
-              <div class="project-card__image-wrapper">
-                <img
-                  src="Assets/project-1.png"
-                  alt="Abstract project placeholder"
-                  class="project-card__image"
-                  width="640"
-                  height="480"
-                />
-              </div>
-              <div class="project-card__content">
-                <h3 class="project-card__title">Custom Cold-Air Intake</h3>
-                <p class="project-card__description">
-                  Designed and built a custom carbon fibre intake for a Mk7.5 Golf GTI, developing skills in Fusion 360 forms, product design, 3D scanning, and composite fabrication.
-                </p>
-              </div>
-            </article>
-          </a>
-          
-          
-          <!-- Project 2 -->
-          <a href="projectDetails.html?slug=not-found&from=index.html">
-            <article class="project-card">
-              <div class="project-card__image-wrapper">
-                <img
-                  src="Assets/project-2.png"
-                  alt="Abstract project placeholder"
-                  class="project-card__image"
-                  width="640"
-                  height="480"
-                />
-              </div>
-              <div class="project-card__content">
-                <h3 class="project-card__title">MMSF Tensile Load Limiter</h3>
-                <p class="project-card__description">
-                  Metal Matrix Syntactic Foams (MMSF's) are useful for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism allowing for the precise control of an activation threshold.
-                </p>
-              </div>
-            </article>
-          </a>
-          
-          
-          <!-- Project 3 -->
-          <a href="projectDetails.html?slug=not-found&from=index.html">
-            <article class="project-card">
-              <div class="project-card__image-wrapper">
-                <img
-                  src="Assets/project-3.png"
-                  alt="Abstract project placeholder"
-                  class="project-card__image"
-                  width="640"
-                  height="480"
-                />
-              </div>
-              <div class="project-card__content">
-                <h3 class="project-card__title">Print-In-Place Gimbal</h3>
-                <p class="project-card__description">
-                  A short project allowing for the a gimballing mechanism, similiar to those found in aerospace applications, to be 3D-Printed all at once, with little to no post processing required.
-                </p>
-              </div>
-            </article>
-          </a>
-          
-        </div>
-        <div class="btn-wrapper--projects">
-          <a href="projects.html" class="btn btn--secondary btn--projects">View all projects</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience & Education Section -->
-    <section id="experience" class="experience">
-      <div class="container">
-        <h2 class="section-heading">Experience &amp; Education</h2>
-        <div class="timeline">
-          <div class="timeline__item">
-            <h3 class="timeline__title">Mechanical Engineering Student</h3>
-            <a href="https://www.newcastle.edu.au/">
-              <p class="timeline__subtitle">University of Newcastle – 2019&nbsp;–&nbsp;Present</p>
-            </a>
-            <p class="timeline__description">
-              Pursuing a Bachelor of Mechanical Engineering with a particular focus on aerospace, renewables, and design for manufacturing.
+    
+    <main>
+    
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__heading">Hi, I'm Ben Boyer</h1>
+            <p class="hero__subheading">
+              Final-year Mechanical Engineering student passionate about solving challenging technical problems with purpose. I transform ideas into practical solutions through design, analysis and hands-on prototyping.
             </p>
-            <p class="timeline__link">
-              <a href="Assets/BenBoyer_UnofficialTranscript_300725.pdf">View transcript</a>
-            </p>
-          </div>
-          <div class="timeline__item">
-            <h3 class="timeline__title">CAD Designer (Part-time)</h3>
-            <a href="https://energyrenaissance.com/">
-              <p class="timeline__subtitle">Energy Renaissance – 2023&nbsp;–&nbsp;2025</p>
-            </a>
-            <p class="timeline__description">
-              Designed and tested advanced battery storage units, collaborated with cross-functional teams, and contributed to product development from concept to manufacturing.
-            </p>
-          </div>
-          <div class="timeline__item">
-            <h3 class="timeline__title">Primary School STEM Day Volunteer Teacher</h3>
-            <a href="https://redhead-p.schools.nsw.gov.au/">
-              <p class="timeline__subtitle">Redhead Public School – 2022&nbsp;</p>
-            </a>
-            <p class="timeline__description">
-              Led students in building and testing balsa wood aircraft during a STEM day, promoting hands-on learning and basic engineering principles.
-            </p>
-          </div>
-          <!-- Additional experience entries can be added here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-          <h2 class="section-heading">Get In Touch</h2>
-          <p class="contact__intro">
-            I'd love to hear from you! Whether you have an opportunity, a
-            question or just want to connect, feel free to drop me a message.
-          </p>
-          <form class="contact__form" action="https://formspree.io/f/xjkowpwy" method="POST">
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <input type="hidden" name="_subject" value="New message from your Personal Portfolio." />
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+            <div class="hero__actions">
+              <a href="#contact" class="btn btn--primary">Get in touch</a>
+              <a 
+                 href="Assets/BenBoyer-Resume-300725.pdf" 
+                 target="_blank" 
+                 rel="noopener" 
+                 class="btn btn--secondary"
+                >Download CV
+              </a>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary">Send Message</button>
-          </form>
-          <div class="contact__links">
-            <a href="https://www.linkedin.com/in/benjamin-boyer-47962026a/" class="contact__link" target="_blank" rel="noopener"
-              >LinkedIn</a
-            >
-            <a href="https://x.com/BenBoyer_au" class="contact__link" target="_blank" rel="noopener"
-              >Twitter/X</a
-            >
-            <a href="Assets/BenBoyer_Resume_300725.pdf" class="contact__link" target="_blank" rel="noopener"
-              >Resume/CV</a
-            >
+          </div>
+          <div class="hero__image-wrapper">
+            <img
+              src="Assets/hero.jpg"
+              alt="Portrait of Ben Boyer"
+              class="hero__image"
+              width="800"
+              height="1066"
+              loading="lazy"
+            />
           </div>
         </div>
-    </section>
+      </section>
+      
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container about__inner">
+          <div class="about__image-wrapper">
+            <img
+              src="Assets/about.jpg"
+              alt="Ben Boyer outdoors"
+              class="about__image"
+              width="800"
+              height="1066"
+              loading="lazy"
+            />
+          </div>
+          <div class="about__content">
+            <h2 class="section-heading">About Me</h2>
+            <p>
+              I'm Ben Boyer, a final‑year Mechanical Engineering student at the
+              University of Newcastle, Australia. Over the past two years, I've
+              worked in the renewable energy sector, where I developed strong
+              technical skills and gained valuable experience in collaborative,
+              real-world engineering environments. These experiences have shaped my
+              approach to problem-solving and reinforced my desire to take on
+              work that pushes me further.
+            </p>
+            <p>
+              I'm especially interested in the aerospace industry, where I hope
+              to contribute to complex, high-impact projects. I'm motivated by
+              roles that demand continuous learning, critical thinking, and the
+              ability to adapt and grow through challenging work.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills">
+        <div class="container">
+          <h2 class="section-heading">Skills &amp; Tools</h2>
+          <div class="skills__grid">
+            <div class="skill">
+              <h3 class="skill__title">Computer Aided Design</h3>
+              <ul class="skill__list">
+                <li>Shapr3D – Advanced</li>
+                <li>Creo Parametric – Intermediate</li>
+                <li>Fusion&nbsp;360 – Intermediate</li>
+                <li>Onshape - Intermediate</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3 class="skill__title">Simulation &amp; Analysis</h3>
+              <ul class="skill__list">
+                <li>ANSYS – Basic</li>
+                <li>Physical testing – Basic</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3 class="skill__title">Manufacturing</h3>
+              <ul class="skill__list">
+                <li>3D printing – Advanced</li>
+                <li>Drafting – Intermediate</li>
+                <li>Sheet metal &amp; milling – Basic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-heading">Project Showcase</h2>
+          <div class="projects__grid">
+
+            <!-- Project 1 -->
+            <a href="projectDetails.html?slug=not-found&from=index.html">
+              <article class="project-card">
+                <div class="project-card__image-wrapper">
+                  <img
+                    src="Assets/project-1.png"
+                    alt="CAD rendering of a custom carbon fibre cold-air intake system in a Golf GTI engine bay"
+                    class="project-card__image"
+                    width="640"
+                    height="480"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Custom Cold-Air Intake</h3>
+                  <p class="project-card__description">
+                    Designed and built a custom carbon fibre intake for a Mk7.5 Golf GTI, developing skills in Fusion 360 forms, product design, 3D scanning, and composite fabrication.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+
+            <!-- Project 2 -->
+            <a href="projectDetails.html?slug=not-found&from=index.html">
+              <article class="project-card">
+                <div class="project-card__image-wrapper">
+                  <img
+                    src="Assets/project-2.png"
+                    alt="Testing apparatus with integrated shear pin designed for Metal Matrix Syntactic Foam energy absorption"
+                    class="project-card__image"
+                    width="640"
+                    height="480"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">MMSF Tensile Load Limiter</h3>
+                  <p class="project-card__description">
+                    Metal Matrix Syntactic Foams (MMSFs) are valued for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism that allows precise control of the activation threshold.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+
+            <!-- Project 3 -->
+            <a href="projectDetails.html?slug=not-found&from=index.html">
+              <article class="project-card">
+                <div class="project-card__image-wrapper">
+                  <img
+                    src="Assets/project-3.png"
+                    alt="Print-in-place 3D-printed gimbal mechanism shown from an isometric view"
+                    class="project-card__image"
+                    width="640"
+                    height="480"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-card__content">
+                  <h3 class="project-card__title">Print-In-Place Gimbal</h3>
+                  <p class="project-card__description">
+                    A short project showcasing a gimbal mechanism, similar to those found in aerospace applications, designed to be 3D-printed as a single unit with little to no post-processing required.
+                  </p>
+                </div>
+              </article>
+            </a>
+
+          </div>
+          <div class="btn-wrapper--projects">
+            <a href="projects.html" class="btn btn--secondary btn--projects">View all projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience & Education Section -->
+      <section id="experience" class="experience">
+        <div class="container">
+          <h2 class="section-heading">Experience &amp; Education</h2>
+          <div class="timeline">
+            <div class="timeline__item">
+              <h3 class="timeline__title">Mechanical Engineering Student</h3>
+              <a href="https://www.newcastle.edu.au/">
+                <p class="timeline__subtitle">University of Newcastle – 2019&nbsp;–&nbsp;Present</p>
+              </a>
+              <p class="timeline__description">
+                Pursuing a Bachelor of Mechanical Engineering with a particular focus on aerospace, renewables, and design for manufacturing.
+              </p>
+              <p class="timeline__link">
+                <a href="Assets/BenBoyer-UnofficialTranscript-300725.pdf">View transcript</a>
+              </p>
+            </div>
+            <div class="timeline__item">
+              <h3 class="timeline__title">CAD Designer (Part-time)</h3>
+              <a href="https://energyrenaissance.com/">
+                <p class="timeline__subtitle">Energy Renaissance – 2023&nbsp;–&nbsp;2025</p>
+              </a>
+              <p class="timeline__description">
+                Designed and tested advanced battery storage units, collaborated with cross-functional teams, and contributed to product development from concept to manufacturing.
+              </p>
+            </div>
+            <div class="timeline__item">
+              <h3 class="timeline__title">Primary School STEM Day Volunteer Teacher</h3>
+              <a href="https://redhead-p.schools.nsw.gov.au/">
+                <p class="timeline__subtitle">Redhead Public School – 2022&nbsp;</p>
+              </a>
+              <p class="timeline__description">
+                Led students in building and testing balsa wood aircraft during a STEM day, promoting hands-on learning and basic engineering principles.
+              </p>
+            </div>
+            <!-- Additional experience entries can be added here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-heading">Get In Touch</h2>
+            <p class="contact__intro">
+              I'd love to hear from you! Whether you have an opportunity, a
+              question or just want to connect, feel free to drop me a message.
+            </p>
+            <form class="contact__form" action="https://formspree.io/f/xjkowpwy" method="POST">
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="hidden" name="_subject" value="New message from your Personal Portfolio." />
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email"/>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required autocomplete="message"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Send Message</button>
+            </form>
+            <div class="contact__links">
+              <a href="https://www.linkedin.com/in/benjamin-boyer-47962026a/" class="contact__link" target="_blank" rel="noopener"
+                >LinkedIn</a
+              >
+              <a href="https://x.com/BenBoyer_au" class="contact__link" target="_blank" rel="noopener"
+                >Twitter/X</a
+              >
+              <a href="Assets/BenBoyer-Resume-300725.pdf" class="contact__link" target="_blank" rel="noopener"
+                >Resume/CV</a
+              >
+            </div>
+          </div>
+      </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -322,5 +349,6 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
     <script src="script.js" defer></script>
+    
   </body>
 </html>

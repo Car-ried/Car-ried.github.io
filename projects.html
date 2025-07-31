@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ben Boyer – Mechanical Engineer Portfolio</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Browse engineering projects by Ben Boyer, showcasing CAD design, prototyping, and hands-on technical problem solving.">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Engineering Projects – Ben Boyer Portfolio" />
+    <meta property="og:description" content="Explore Ben Boyer's mechanical engineering projects across CAD, simulation, composites, and more. Real-world experience meets design precision." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://benboyer.au/projects.html" />
+    <meta property="og:image" content="https://benboyer.au/Assets/social-preview-collage.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Engineering Projects – Ben Boyer Portfolio" />
+    <meta name="twitter:description" content="Hands-on mechanical engineering projects from Ben Boyer. Browse CAD, analysis, testing and prototyping work." />
+    <meta name="twitter:image" content="https://benboyer.au/Assets/social-preview-collage.jpg" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,13 +55,13 @@
         <a href="index.html" class="site-logo">Ben&nbsp;Boyer</a>
          
          <!-- Hamburger toggle (hidden on large screens) -->
-         <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+         <button class="hamburger" aria-label="Toggle site navigation" aria-controls="site-navigation" aria-expanded="false">
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
          </button>
          
-         <nav class="site-nav">
+         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="nav-item"><a href="./index.html#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="./index.html#skills" class="nav-link">Skills</a></li>
@@ -56,29 +73,33 @@
         <a href="./index.html#contact" class="btn btn--primary contact-btn">Contact</a>
       </div>
     </header>
+    
+    <main>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-heading">All Projects</h2>
-        <div id="filterBar" class="filters-bar">
-          <button class="btn btn--secondary filter-btn active" data-filter="all">All</button>
-          <button class="btn btn--secondary filter-btn" data-filter="cad">CAD</button>
-          <button class="btn btn--secondary filter-btn" data-filter="simulation">Simulation</button>
-          <button class="btn btn--secondary filter-btn" data-filter="prototype">Prototype</button>
-          <button class="btn btn--secondary filter-btn" data-filter="3d-print">3D-Print</button>
-          <button class="btn btn--secondary filter-btn" data-filter="build">Build</button>
-          <button class="btn btn--secondary filter-btn" data-filter="testing">Testing</button>
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-heading">All Projects</h2>
+          <div id="filterBar" class="filters-bar">
+            <button class="btn btn--secondary filter-btn active" data-filter="all">All</button>
+            <button class="btn btn--secondary filter-btn" data-filter="cad">CAD</button>
+            <button class="btn btn--secondary filter-btn" data-filter="simulation">Simulation</button>
+            <button class="btn btn--secondary filter-btn" data-filter="prototype">Prototype</button>
+            <button class="btn btn--secondary filter-btn" data-filter="3d-print">3D-Print</button>
+            <button class="btn btn--secondary filter-btn" data-filter="build">Build</button>
+            <button class="btn btn--secondary filter-btn" data-filter="testing">Testing</button>
+          </div>
+          <div class="projects__grid all-projects__grid" id="project-grid">
+            <!-- Dynamically loaded projects inserted here -->
+          </div>
+          <div class="coming-soon">
+            <h3 class="project-card__title">More coming soon…</h3>
+            <p class="project-card__description">Additional projects will appear here as they're completed.</p>
+          </div>
         </div>
-        <div class="projects__grid all-projects__grid" id="project-grid">
-          <!-- Dynamically loaded projects inserted here -->
-        </div>
-        <div class="coming-soon">
-          <h3 class="project-card__title">Coming soon..</h3>
-          <p class="project-card__description">New projects will get added here!</p>
-        </div>
-      </div>
-    </section>
+      </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer">

@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Details – Ben Boyer</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Mechanical engineering project by Ben Boyer. Explore practical examples of CAD, prototyping, testing, and hands-on design work.">
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Engineering Project – Ben Boyer Portfolio" />
+    <meta property="og:description" content="A mechanical engineering project by Ben Boyer. Includes CAD visuals, prototyping details, and skills used." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://benboyer.au/projectDetails.html" />
+    <meta property="og:image" content="https://benboyer.au/Assets/social-preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Engineering Project – Ben Boyer Portfolio" />
+    <meta name="twitter:description" content="See one of Ben Boyer's mechanical engineering projects – CAD, testing, and design in action." />
+    <meta name="twitter:image" content="https://benboyer.au/Assets/social-preview.jpg" />
+
     <!-- Import the existing portfolio styles so the page inherits the same look and feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -84,19 +101,20 @@
     </style>
   </head>
   <body>
+   
     <!-- Navigation copied from the main site to ensure consistency -->
     <header class="site-header">
       <div class="container header__inner">
         <a href="index.html" class="site-logo">Ben&nbsp;Boyer</a>
          
          <!-- Hamburger toggle (hidden on large screens) -->
-         <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+         <button class="hamburger" aria-label="Toggle site navigation" aria-controls="site-navigation" aria-expanded="false">
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
            <span class="hamburger__line"></span>
          </button>
          
-         <nav class="site-nav">
+         <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
           <ul class="nav-list">
             <li class="nav-item"><a href="./index.html#about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="./index.html#skills" class="nav-link">Skills</a></li>
@@ -108,7 +126,9 @@
         <a href="./index.html#contact" class="btn btn--primary contact-btn">Contact</a>
       </div>
     </header>
+    
     <main>
+     
       <!-- Hero section populated by JavaScript -->
       <section class="project-hero">
         <div class="container">
@@ -117,6 +137,7 @@
           <img id="project-hero-image" src="" alt="" />
         </div>
       </section>
+      
       <!-- Overview / introduction -->
       <section class="project-section" id="overview-section">
         <div class="container">
@@ -124,6 +145,7 @@
           <p id="project-overview"></p>
         </div>
       </section>
+      
       <!-- Design motivation -->
       <section class="project-section" id="motivation-section">
         <div class="container">
@@ -131,6 +153,7 @@
           <p id="project-motivation"></p>
         </div>
       </section>
+      
       <!-- Problem statement -->
       <section class="project-section" id="problem-section">
         <div class="container">
@@ -138,6 +161,7 @@
           <p id="project-problem"></p>
         </div>
       </section>
+      
       <!-- Solution / approach -->
       <section class="project-section" id="solution-section">
         <div class="container">
@@ -145,6 +169,7 @@
           <p id="project-solution"></p>
         </div>
       </section>
+      
       <!-- Skills & tools used -->
       <section class="project-section" id="skills-section">
         <div class="container">
@@ -152,6 +177,7 @@
           <ul id="project-skills"></ul>
         </div>
       </section>
+      
       <!-- Lessons learned -->
       <section class="project-section" id="lessons-section">
         <div class="container">
@@ -159,6 +185,7 @@
           <p id="project-lessons"></p>
         </div>
       </section>
+      
       <!-- Optional gallery -->
       <section class="project-section" id="gallery-section">
         <div class="container">
@@ -166,11 +193,14 @@
           <div class="project-gallery" id="project-gallery"></div>
         </div>
       </section>
+      
       <!-- Back link -->
       <div class="project-back">
         <a id="back-button" class="btn btn--secondary">← Back</a>
       </div>
+      
     </main>
+    
     <footer class="site-footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> Ben Boyer. All rights reserved.</p>
@@ -211,6 +241,7 @@
         const heroImg = document.getElementById('project-hero-image');
         heroImg.src = project.heroImage;
         heroImg.alt = project.heroAlt || project.title;
+        heroImg.loading = 'lazy';
         document.getElementById('project-overview').textContent = project.overview;
         document.getElementById('project-motivation').textContent = project.designMotivation;
         document.getElementById('project-problem').textContent = project.problem;
@@ -234,6 +265,7 @@
             const img = document.createElement('img');
             img.src = imgObj.src;
             img.alt = imgObj.alt || '';
+            img.loading = 'lazy';
             gallery.appendChild(img);
           });
         } else {

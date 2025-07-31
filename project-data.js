@@ -94,7 +94,7 @@ window.projectData = {
   },
   "mmsf-tensile-load-limiter": {
     tileTitle: "MMSF Tensile Load Limiter",
-    tileDescription: "Metal Matrix Syntactic Foams (MMSF's) are useful for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism allowing for the precise control of an activation threshold.",
+    tileDescription: "Metal Matrix Syntactic Foams (MMSFs) are valued for their energy absorption capabilities. This testing apparatus was designed to integrate a shear pin mechanism that allows precise control of the activation threshold.",
     tileImage: "Assets/project-2.png",
     tileAlt: "CAD assembly of the MMSF tensile load limiter",
     dataCategory: "cad testing build",
@@ -222,9 +222,9 @@ window.projectData = {
     designMotivation:
       "This project was motivated by a desire to experiment with unconventional drive systems and explore the mechanical principles behind omni-directional movement. I wanted to build something hands-on that combined 3D printing with real-world electronics—without relying on expensive hardware.",
     problem:
-      "Traditional robots using fixed-direction wheels are limited in how they maneuver. Achieving smooth, multi-directional motion often requires complex control systems and expensive components. I wanted to explore how far I could get with minimal tools and a constrained budget.",
+      "Traditional robots using fixed-direction wheels are limited in how they manoeuvre. Achieving smooth, multi-directional motion often requires complex control systems and expensive components. I wanted to explore how far I could get with minimal tools and a constrained budget.",
     solution:
-      "Using 3D-printed omni-wheels and a basic two-channel motor driver, I created a mechanically simple robot where each side's wheels are linked. This allowed for fluid planar movement across a surface. An Arduino handles basic motor control, with no rotation control due to the two-motor constraint. Despite the limited control, the robot is highly maneuverable and effective for demonstrating omni-directional motion.",
+      "Using 3D-printed omni-wheels and a basic two-channel motor driver, I created a mechanically simple robot where each side's wheels are linked. This allowed for fluid planar movement across a surface. An Arduino handles basic motor control, with no rotation control due to the two-motor constraint. Despite the limited control, the robot is highly manoeuvrable and effective for demonstrating omni-directional motion.",
     skills: [
       "3D Design & Printing",
       "Arduino Prototyping",
