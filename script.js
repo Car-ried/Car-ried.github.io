@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categories = project.dataCategory || "uncategorized";
     const tile = document.createElement("a");
-    tile.href = `projectDetails.html?slug=coming-soon&from=projects.html`;
+    tile.href = `projectDetails.html?slug=${slug}&from=projects.html`;
 
     tile.innerHTML = `
-      <article class="project-card project-card-max" data-category="${categories}">
+      <article class="project-card project-card-max" data-category="${categories} ${project.status || ''}">
         <div class="project-card__image-wrapper">
           <img
             src="${project.tileImage}"

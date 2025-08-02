@@ -45,7 +45,7 @@
       }
       .project-hero p {
         max-width: 40em;
-        margin: 0 auto 1.5rem auto;
+        margin: 0 auto 1rem auto;
         font-size: 1.125rem;
         color: var(--colour-mid);
       }
@@ -100,6 +100,42 @@
         text-align: center;
         margin: 2rem 0;
       }
+      
+      .project-gallery video {
+        width: 100%;
+        height: auto;
+        border-radius: 0.375rem;
+        box-shadow: 0 2px 8px var(--shadow-colour);
+        object-fit: cover;
+      }
+      
+      .project-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5ch;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .project-status--complete {
+        background-color: var(--colour-complete);
+        color: var(--colour-dark);
+      }
+
+      .project-status--ongoing {
+        background-color: var(--colour-accent-light);
+        color: var(--colour-accent);
+      }
+
+      .status-icon {
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+
+
     </style>
   </head>
   <body>
@@ -136,6 +172,7 @@
         <div class="container">
           <h1 id="project-title"></h1>
           <p id="project-subtitle"></p>
+          <div id="statusTag"></div>
           <img id="project-hero-image" src="" alt="" />
         </div>
       </section>
@@ -235,6 +272,7 @@
           document.getElementById('skills-section').style.display = 'none';
           document.getElementById('lessons-section').style.display = 'none';
           document.getElementById('gallery-section').style.display = 'none';
+          document.getElementById('statusTag').style.display = '';
           return;
         }
         document.title = `${project.title} – Ben Boyer`;
@@ -247,8 +285,29 @@
         document.getElementById('project-overview').textContent = project.overview;
         document.getElementById('project-motivation').textContent = project.designMotivation;
         document.getElementById('project-problem').textContent = project.problem;
-        document.getElementById('project-solution').textContent = project.solution;
+        const solutionEl = document.getElementById('project-solution');
+          const solutionText = (project.solution || '').replace(/\n\n/g, '<br><br>');
+          solutionEl.innerHTML = solutionText;
+
         document.getElementById('project-lessons').textContent = project.lessons;
+        const status = (project.status || '').toLowerCase();
+        const statusTag = document.createElement('span');
+        statusTag.classList.add('project-status', `project-status--${status}`);
+        statusTag.innerHTML =
+          status === 'complete'
+            ? `
+              <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.285 6.709a1 1 0 0 0-1.41-1.418L9 15.167l-3.875-3.875a1 1 0 1 0-1.415 1.415l4.582 4.582a1 1 0 0 0 1.415 0l10.578-10.58z"/>
+              </svg>
+              Completed`
+            : `
+              <svg class="status-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1a11 11 0 1 0 11 11A11.012 11.012 0 0 0 12 1Zm0 2a9 9 0 1 1-9 9a9 9 0 0 1 9-9Zm1 4h-2v6h6v-2h-4Z"/>
+              </svg>
+              Ongoing`;
+
+        document.getElementById('project-subtitle').after(statusTag);
+
         // Populate skills list
         const skillsList = document.getElementById('project-skills');
         skillsList.innerHTML = '';
@@ -263,12 +322,35 @@
         const gallery = document.getElementById('project-gallery');
         gallery.innerHTML = '';
         if (Array.isArray(project.gallery) && project.gallery.length > 0) {
-          project.gallery.forEach(imgObj => {
-            const img = document.createElement('img');
-            img.src = imgObj.src;
-            img.alt = imgObj.alt || '';
-            img.loading = 'lazy';
-            gallery.appendChild(img);
+          project.gallery.forEach(mediaObj => {
+            const extension = mediaObj.src.split('.').pop().toLowerCase();
+
+            if (extension === 'mp4') {
+              const video = document.createElement('video');
+              video.src = mediaObj.src;
+              video.setAttribute('muted', '');
+              video.setAttribute('playsinline', '');
+              // Add controls on hover, remove on mouseleave
+              video.addEventListener('mouseenter', () => {
+                video.controls = true;
+              });
+              video.addEventListener('mouseleave', () => {
+                video.controls = false;
+              });
+              video.setAttribute('loop', '');
+              video.setAttribute('preload', 'metadata');
+              video.innerHTML = 'Your browser does not support the video tag.';
+              video.style.width = '100%';
+              video.style.borderRadius = '0.375rem';
+              video.style.boxShadow = '0 2px 8px var(--shadow-colour)';
+              gallery.appendChild(video);
+            } else {
+              const img = document.createElement('img');
+              img.src = mediaObj.src;
+              img.alt = mediaObj.alt || '';
+              img.loading = 'lazy';
+              gallery.appendChild(img);
+            }
           });
         } else {
           // If no gallery provided, hide the section
@@ -276,10 +358,32 @@
         }
       }
       
-      // Initialise the page once DOM is ready
-      window.addEventListener('DOMContentLoaded', populateProject);
-      
+      function enableAutoplayOnView() {
+        const videos = document.querySelectorAll('#project-gallery video');
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              const video = entry.target;
+              if (entry.isIntersecting) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            });
+          }, {
+            threshold: 0.5  // Adjust if needed: 0.5 = half the video visible
+          });
+
+          videos.forEach(video => observer.observe(video));
+        }
+      }
+
       window.addEventListener('DOMContentLoaded', () => {
+        populateProject();
+
+        enableAutoplayOnView();
+
         const fromPage = getQueryParam('from');
         const backBtn = document.getElementById('back-button');
 

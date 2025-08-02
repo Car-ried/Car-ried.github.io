@@ -23,6 +23,7 @@
   --colour-accent-light: #e8f2fb;
   /* Shadow for subtle depth */
   --shadow-colour: rgba(0, 0, 0, 0.05);
+  --colour-complete: rgba(30, 255, 50, 0.3);
 }
 
 /* Reset and base typography */
