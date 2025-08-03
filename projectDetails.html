@@ -34,11 +34,21 @@
       /* The project hero section uses generous padding and centres its content.
          It borrows colours and typography from the main stylesheet so it
          automatically harmonises with the rest of the site. */
+      /*
       .project-hero {
-        background-color: var(--colour-bg);
         padding: 4rem 0;
         text-align: center;
       }
+      
+      .project-hero img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 8px var(--shadow-colour);
+      }
+      */
+      
       .project-hero h1 {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
@@ -48,13 +58,6 @@
         margin: 0 auto 1rem auto;
         font-size: 1.125rem;
         color: var(--colour-mid);
-      }
-      .project-hero img {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 8px var(--shadow-colour);
       }
 
       /* Generic section styling – reuse the portfolio section heading style */
@@ -134,7 +137,35 @@
         vertical-align: middle;
         flex-shrink: 0;
       }
+      
+      .hero__inner.project-not-found {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 4rem 0;
+      }
 
+      .hero__inner.project-not-found .hero__content {
+        max-width: none;
+      }
+
+      .hero__inner.project-not-found .hero__image-wrapper {
+        display: none;
+      }
+
+      /* Bring the back link up closer to the message when not found. */
+      .hero__inner.project-not-found ~ .project-back {
+        margin-top: 2rem;
+      }
+
+      /* Make the hero height adapt to its content, similar to the home page hero,
+         and add padding for breathing room. */
+      .project-hero.hero {
+        min-height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
 
     </style>
   </head>
@@ -168,15 +199,19 @@
     <main>
      
       <!-- Hero section populated by JavaScript -->
-      <section class="project-hero">
-        <div class="container">
-          <h1 id="project-title"></h1>
-          <p id="project-subtitle"></p>
-          <div id="statusTag"></div>
-          <img id="project-hero-image" src="" alt="" />
+      <section class="project-hero hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 id="project-title" class="hero__heading"></h1>
+            <p id="project-subtitle" class="hero__subheading"></p>
+            <div id="statusTag" style="margin-bottom: 1.5rem;"></div>
+          </div>
+          <div class="hero__image-wrapper">
+            <img id="project-hero-image" src="" alt="" class="hero__image" />
+          </div>
         </div>
       </section>
-      
+
       <!-- Overview / introduction -->
       <section class="project-section" id="overview-section">
         <div class="container">
@@ -273,6 +308,18 @@
           document.getElementById('lessons-section').style.display = 'none';
           document.getElementById('gallery-section').style.display = 'none';
           document.getElementById('statusTag').style.display = '';
+
+          // Add a class to adjust layout of the hero inner container
+          const heroInner = document.querySelector('.hero__inner');
+          heroInner.classList.add('project-not-found');
+
+          // Relocate the back link into the hero content for not found scenarios.
+          const backContainer = document.querySelector('.project-back');
+          const heroContent = heroInner.querySelector('.hero__content');
+          if (backContainer && heroContent) {
+            backContainer.style.margin = '2rem 0 0';
+            heroContent.appendChild(backContainer);
+          }
           return;
         }
         document.title = `${project.title} – Ben Boyer`;
