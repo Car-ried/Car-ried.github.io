@@ -14,7 +14,7 @@ window.projectData = {
     tileDescription: "TILE DESCRIPTION",
     tileImage: "Assets/project-X.png",
     tileAlt: "ALT TEXT",
-    dataCategory: "cad prototype 3d-print build testing complete ongoing",
+    dataCategory: "cad 3d-printing build",
     
     title: "PROJECT TITLE",
     subtitle: "PROJECT SUB TITLE",
@@ -56,7 +56,7 @@ window.projectData = {
     tileDescription: "Designing and building a custom carbon fibre intake for a Mk7.5 Golf GTI, developing skills in Fusion 360 forms, product design, 3D scanning, and composite fabrication.",
     tileImage: "Assets/project-1.png",
     tileAlt: "CAD rendering of the custom cold-air intake on a Golf GTI engine bay",
-    dataCategory: "cad prototype 3d-print build",
+    dataCategory: "cad 3d-printing build",
     
     title: "Custom Cold-Air Intake",
     subtitle: "Mk7.5 Golf GTI Carbon Fibre Intake",
@@ -92,7 +92,7 @@ window.projectData = {
     tileDescription: "Metal Matrix Syntactic Foams (MMSFs) are noted for their energy absorption capabilities. This testing apparatus was engineered to include a shear pin mechanism enabling controlled activation at a defined load.",
     tileImage: "Assets/project-2.png",
     tileAlt: "CAD assembly of the MMSF tensile load limiter",
-    dataCategory: "cad testing build",
+    dataCategory: "cad build",
     
     title: "MMSF Tensile Load Limiter",
     subtitle: "Tensile Load Limiter Apparatus with Integrated Shear Pin",
@@ -128,7 +128,7 @@ window.projectData = {
     tileDescription: "A short project allowing for a gimballed mechanism, similar to those found in aerospace applications, to be 3D-Printed all at once, with little to no post-processing required.",
     tileImage: "Assets/project-3.png",
     tileAlt: "Rendered image of the print-in-place gimbal",
-    dataCategory: "cad prototype 3d-print",
+    dataCategory: "cad 3d-printing",
     
     title: "Print-In-Place Gimbal",
     subtitle: "3D-Printed Gimbal Mechanism",
@@ -206,7 +206,7 @@ window.projectData = {
     tileDescription: "A 3D-printed omni-directional robot with simple Arduino control.",
     tileImage: "Assets/project-5.png",
     tileAlt: "Completed OMNI-Wheel Robot",
-    dataCategory: "cad prototype 3d-print build",
+    dataCategory: "cad 3d-printing build",
     
     title: "OMNI-Wheel Robot",
     subtitle: "An Omni-Directional Robot Using 3D-Printable Wheels",
