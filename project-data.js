@@ -70,7 +70,7 @@ window.projectData = {
     problem:
       "The challenge is packaging the new intake within the tight confines of the engine bay without interfering with existing components. It needs to align with OEM mounting points, avoid heat sources and deliver a smooth, unrestricted path for air. Because carbon fibre is labour-intensive to rework, the design also needs to be correct the first time.",
     solution:
-      "I used my phone, and a 3D scanner app, Polycam, to capture the geometry of the engine bay and imported the mesh into Zeiss Inspect. Using Zeiss Inspect enabled me to align multiple meshes and  assign a global coordinate system, which was then imported into Fusion 360. Using the forms workspace I sculpted an intake shape that hugged the contours of the engine bay ensuring minimal redirection of the airstream. Additionally, I kept the OEM passthrough feature of the stock intake to retain the factory airflow into the engine bay.\n\nThe tooling for the carbon-fibre lay-up will be 3D-printed, sanded and sealed. Multiple layers of carbon fabric will be vacuum-bagged over the form, cured and then trimmed to final dimensions. The finished intake installs using stock hardware and aims to dramatically improve induction sound and aesthetics.",
+      "I used my phone and the 3D-scanner app Polycam to capture the engine bay's geometry, then imported the mesh into Zeiss Inspect for alignment and to assign a global coordinate system. Using the Forms workspace in Fusion 360, I sculpted an intake shape that hugged the contours of the engine bay, ensuring minimal redirection of the airstream. Additionally, I kept the OEM pass-through feature of the stock intake to retain the factory airflow into the engine bay.\n\nThe tooling for the carbon-fibre lay-up will be 3D-printed, sanded and sealed. Multiple layers of carbon fabric will be vacuum bagged over the form, cured and then trimmed to final dimensions. The finished intake installs using stock hardware and aims to dramatically improve induction sound and aesthetics.",
     skills: [
       "Fusion 360 forms & surface modelling",
       "3D scanning & reverse engineering",
@@ -102,7 +102,7 @@ window.projectData = {
     overview:
       "Metal Matrix Syntactic Foams (MMSFs) are an excellent material for absorbing sudden, high-load impacts by plastically deforming. As part of my Final Year Project (FYP) at University, I am designing a testing apparatus that integrates a mechanical fuse, such as a shear-pin, to ensure consistent and controlled failure at a predefined threshold. This allows the mechanism to only activate under the desired conditions, avoiding unnecessary deformation of the MMSF in low-load scenarios.",
     designMotivation:
-      "My supervising professor, and past student collaborators, lacked a reliable fixture to evaluate the compressive behaviour of MMSFs. Although the test rig is loaded in tension, the MMSF specimen is subjected to compressive loading through the mechanical arrangement. The redesign aims to resolve known issues related to asymmetric compression, shear pin over-performance, limited sample variability, and limited compression range. Designing a bespoke load limiter provided an opportunity to apply mechanical design principles and expand my knowledge of fracture mechanics.",
+      "My supervising professor and past student collaborators lacked a reliable fixture to evaluate the compressive behaviour of MMSFs. Although the test rig is loaded in tension, the MMSF specimen is subjected to compressive loading through the mechanical arrangement. The redesign aims to resolve known issues related to asymmetric compression, shear pin over-performance, limited sample variability, and limited compression range. Designing a bespoke load limiter provided an opportunity to apply mechanical design principles and expand my knowledge of fracture mechanics.",
     problem:
       "The fixture needed to be compatible with standard testing machines while providing repeatable activation at a predetermined load. Additionally, it should address the previously identified issues. Safety was a key concern, as components of the device were intentionally designed to fail under specific loading conditions.",
     solution:
@@ -110,7 +110,7 @@ window.projectData = {
     skills: [
       "Mechanical design of test fixtures",
       "Test protocol development",
-      "Shear-pin sizing & failure analysis",
+      "Shear pin sizing & failure analysis",
       "Design for manufacturing",
       "Casting",
     ],
@@ -229,7 +229,7 @@ window.projectData = {
       "Mechanical Assembly"
     ],
     lessons:
-      "This project taught me how to work creatively within hardware limitations. I learned how omni-wheels function mechanically, how to repurpose old electronics. It also reinforced the value of iteration and physical prototyping.",
+      "This project taught me how to work creatively within hardware limitations. I learned how omni-wheels function mechanically and how to repurpose old electronics. It also reinforced the value of iteration and physical prototyping.",
     gallery: [
       {
         src: "Assets/omni-wheel-closeup.png",
