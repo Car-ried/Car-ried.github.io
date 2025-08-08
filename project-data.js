@@ -119,8 +119,16 @@ window.projectData = {
       "This project reinforced the importance of early identification of critical path constraints in the timeline. I also learned to balance the need for adjustability with the benefits of design simplicity; the final design uses simple pins rather than more complex mechanisms involving linkages or moving parts. Collaborating with researchers broadened my understanding of material science and test protocol, including insights into MMSF behaviour under compressive load.",
     gallery: [
       {
-        src: "Assets/project-2.png",
-        alt: "CAD rendering of the load limiter"
+        src: "Assets/TLLLowSide.jpg",
+        alt: "Side view of the TLL in the testing rig"
+      },
+      {
+        src: "Assets/TLLFront.jpg",
+        alt: "Front view of the TLL in the testing rig"
+      },
+      {
+        src: "Assets/TLLComponents.jpg",
+        alt: "Components of the TLL layed out"
       }
     ]
   },
