@@ -582,6 +582,13 @@ a {
   font-style: italic;
 }
 
+.timeline__link span {
+  background-color: var(--colour-mid);
+  padding: 0.01rem;
+  margin: 0.5rem;
+  font-style: normal;
+}
+
 .timeline__link:hover,
 .timeline__link:focus {
   color: var(--colour-accent);
