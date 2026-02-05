@@ -589,8 +589,8 @@ a {
   font-style: normal;
 }
 
-.timeline__link:hover,
-.timeline__link:focus {
+.timeline__link a:hover,
+.timeline__link a:focus {
   color: var(--colour-accent);
 }
 
